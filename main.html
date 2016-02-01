@@ -26,21 +26,36 @@
     </form>
 
   </div>
-  <div>
+  <div id="mobile-nav">
     <ul id="slide-out" class="side-nav">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
+    <li id="brand-logo-mobile-wrapper"><div id="brand-logo-mobile"><img src=
+    "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png"/></div></li>
+    <li>
+      <ul><li><a href="#!">First Sidebar Link</a></li>
+          <li><a href="#!">Second Sidebar Link</a></li>
+      </ul>
+    </li>
   </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">dehaze</i></a>
   </div>
 </nav>
 <div class="hide-on-large-only mobile-only-filters">
 	<div class="row container">
-		<div class="col m4 s4 center"><i class="material-icons">place</i>Bangalore</div>
-		<div class="col m4 s4 center"><i class="material-icons">explore</i>Location</div>
-		<div class="col m4 s4 center"><i class="material-icons">local_dining</i>Category</div>
+		<div class="col m4 s4 center"><a class="modal-trigger" href="#city-modal"><i class="material-icons">place</i>Bangalore</a></div>
+		<div class="col m4 s4 center"><a class="modal-trigger" href="#location-modal"><i class="material-icons">explore</i>Location</a></div>
+		<div class="col m4 s4 center"><a class="modal-trigger" href="#cuisine-modal"><i class="material-icons">local_dining</i>Category</a></div>
 	</div>
 </div>
+<!--Modals-->
+<div id="city-modal" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
   <div class="custom-container">
     <div class="row" >
       <div class="col l2 hide-on-med-and-down" id="left-panel">
@@ -103,7 +118,7 @@
         </div>
 
         <div class="row">
-          <div class="col s6 l4">
+          <div class="col s12 l4">
             <div class="card">
               <div class="card-image">
                 <div class="chip custom-chip outlet-chip">
@@ -111,7 +126,7 @@
                 </div><img src=
                 "images/traveller.jpg" />
                 <span class="card-title">Kota Kachori</span>
-                <div class="rating"><i class="material-icons" style="font-size: 18px;">thumb_up</i></div>
+                <div class="rating"><i class="material-icons">thumb_up</i></div>
               </div>
               
               <div class="card-content">
@@ -119,7 +134,7 @@
                 "text-align:center"></p>
 
              	<div class="row">
-	                <div class="col l6 s8" class="location-name">
+	                <div class="col l6 s6" class="location-name">
 	                  Koromangala
 	                </div>
 
@@ -132,22 +147,17 @@
                 <hr />
 
                 <div class="best-for">
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Pyaz
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Pyaz
                   Kachoris</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Chole
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Chole
                   Bhature</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Jalebi</span></p>
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Jalebi</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Sweets</span></p>
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Sweets</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Sabudana
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Sabudana
                   Khichdi</span></p>
                 </div>
 
@@ -162,7 +172,7 @@
             </div>
           </div>
 
-          <div class="col s6 l4">
+          <div class="col s12 l4">
             <div class="card">
               <div class="card-image">
                 <div class="chip custom-chip outlet-chip">
@@ -170,14 +180,14 @@
                 </div><img src=
                 "images/traveller.jpg" />
                 <span class="card-title">Kota Kachori</span>
-                  <div class="rating"><i class="material-icons" style="font-size: 18px;">thumb_up</i></div>
+                  <div class="rating"><i class="material-icons">thumb_up</i></div>
               </div>
 
               <div class="card-content">
                 <p data-longitude="77.5639761" data-latitude="13.0334194" style=
                 "text-align:center"></p>
  				<div class="row">
-	                <div class="col l6 s8" class="location-name">
+	                <div class="col l6 s6" class="location-name">
 	                  Koromangala
 	                </div>
 
@@ -190,22 +200,17 @@
                 <hr />
 
                 <div class="best-for">
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Pyaz
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Pyaz
                   Kachoris</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Chole
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Chole
                   Bhature</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Jalebi</span></p>
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Jalebi</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Sweets</span></p>
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Sweets</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Sabudana
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Sabudana
                   Khichdi</span></p>
                 </div>
 
@@ -220,7 +225,7 @@
             </div>
           </div>
 
-          <div class="col s6 l4">
+          <div class="col s12 l4">
             <div class="card">
               <div class="card-image">
                 <div class="chip custom-chip outlet-chip">
@@ -228,14 +233,14 @@
                 </div><img src=
                 "images/traveller.jpg" />
                 <span class="card-title">Kota Kachori</span>
-                <div class="rating"><i class="material-icons" style="font-size: 18px;">thumb_up</i></div>
+                <div class="rating"><i class="material-icons">thumb_up</i></div>
               </div>
 
               <div class="card-content">
                 <p data-longitude="77.5639761" data-latitude="13.0334194" style=
                 "text-align:center"></p>
                 <div class="row">
-	                <div class="col l6 s8" class="location-name">
+	                <div class="col l6 s6" class="location-name">
 	                  Koromangala
 	                </div>
 
@@ -248,22 +253,17 @@
                 <hr />
 
                 <div class="best-for">
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Pyaz
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Pyaz
                   Kachoris</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Chole
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Chole
                   Bhature</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Jalebi</span></p>
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Jalebi</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Sweets</span></p>
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Sweets</span></p>
 
-                  <p><i class="material-icons" style=
-                  "font-size:15px">grade</i><span style="margin:5px">Sabudana
+                  <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Sabudana
                   Khichdi</span></p>
                 </div>
 
@@ -280,7 +280,7 @@
         </div>
       </div>
 
-      <div class="col l2" id="right-panel">
+      <div class="col l2 s12" id="right-panel">
       	<div class="row">
       		<div class="col s12" style="height:200px; background: #ccc"></div>
       		<div class="col s12" style="height:200px; background: #ccc"></div>
@@ -293,7 +293,7 @@
   <footer class="page-footer">
   	<div class="container">
   		<div class="row">
-  			<div class="col s4 center-align">
+  			<div class="col s4 center-align" id="footer-left-pane">
   				<h5>Talking Street</h5>
   				<ul>
   					<li>about us</li>
@@ -303,7 +303,7 @@
   					<li>hygiene</li>
   				</ul>
   			</div>
-  			<div class="col s4 center-align">
+  			<div class="col s4 center-align" id="footer-center-pane">
   				<h5>Connect with us</h5>
   				<div class="row">
   					<i class="fa fa-facebook"></i>
@@ -311,7 +311,7 @@
   					<i class="fa fa-google-plus"></i>
   				</div>
   			</div>
-  			<div class="col s4 center-align">
+  			<div class="col s4 center-align" id="footer-right-pane">
   				<h5>Contact</h5>
   				<div class="row">
   					<div class="col s12">Drop a mail to <a href="mailto:hello@talkingstreet.in">hello@talkingstreet.in</a></div>

@@ -68,11 +68,9 @@ hr {
   display: inline-block; }
 
 .card-icons {
-  display: inline; }
-
-.card-icons i {
-  font-size: 18px !important; }
-
+  display: inline; 
+  text-align:right;
+}
 .info {
   display: none; }
 
@@ -121,5 +119,71 @@ hr {
       width:100%;
       padding:10px;
     }
+  }
+  .material-icons{
+    font-size: 1.5em; 
+  }
+  .rating{
+     padding:1em;
+     bottom: -40px;
+     right: 20px;
+    i{
+      font-size:2em;
+    }
+  }
+  #footer-left-pane{
+    text-align:left;
+  }
+  .side-nav{
+    a{
+      font-size: 24px;
+      border-bottom: 1px solid #ccc;
+      padding-top: 5px;
+    }
+  }
+  #brand-logo-mobile-wrapper{
+    height: 200px;
+    display: table;
+    width:100%;
+  }
+  #brand-logo-mobile{
+    text-align:center;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .card-content{
+  font-size:1.1em;
+  }
+  .card .card-title{
+      font-size: 2em;
+  }
+  .chip{
+    height: 2em;
+    font-size: 1em;
+    line-height: 2em;
+    padding: 0 1em;
+    border-radius: 1em;
+  }
+  .custom-chip{
+    top: 1em;
+    left: 1em;
+  }
+  .best-for p i{
+  font-size:1.2em;
+  }
+  #mobile-nav{
+      height: 100%;
+  }
+  nav a.button-collapse{
+    display: table;
+    height: 100%;
+  }
+  #mobile-nav a i{
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 2em;
+    padding-left: 1em;
   }
 }
