@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>Talking Street</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div id="container">
+		<div id="container-wrapper" style="background:rgba(0,0,0,0.5);">
+		<div id="brand-logo">
+			<img src="http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png">
+		</div>
+		<div style="padding:5%">
+			<div id="branding-line">Discover street food around you.</div>
+			<div id="city-filter">
+				<select>
+					<option value="" disabled selected>Choose your city</option>
+				</select>
+			</div>
+		</div>
+		</div>
+		<div id="attribution">Original image from <a href="http://photos.bucketlistly.com/post/136518941771">BucketListly Photos</a></div>
+	</div>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+	<script type="text/javascript">
+		var cityMap = {};
+		$(function(){
+				$.ajax({
+				url:'data/location.listing.json',
+				success:function(location){
+					makeCityMap(location);
+
+				}
+			});
+		});
+		makeCityMap = function(location){
+			console.log(location);
+			$.each(location, function(index, result){
+				var parent = result.parent;
+				if (parent == "NULL")
+					parent = "root";
+				var name = result.name;
+				console.log("Processing index : "+name+" with parent : "+parent);
+				// If parent city is present, then add the location and initialise with empty list
+				if(cityMap.hasOwnProperty(parent)){
+					console.log(name);
+					cityMap[parent][name]=[];
+				}
+				// If parent city not present, first add the parent city and then initialise with empty list 
+				else{
+					cityMap[parent] = {};
+					cityMap[parent][name]=[];
+					console.log("Initialising parent with name : "+name);
+				}
+			});
+			console.log(cityMap);
+			var cities = _.keys(cityMap);
+			var select = "";
+			$.each(cities,function(index, result){
+				select+="<option>"+result+"</option>";
+			});
+			console.log(select);
+			$('select').append(select).material_select();
+		}
+	</script>
+</body>
+</html>
+
+<!--
+	https://www.atlassian.com/git/tutorials/saving-changes
+	https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/
+	http://docs.duckduckhack.com/resources/git-workflow.html
+-->

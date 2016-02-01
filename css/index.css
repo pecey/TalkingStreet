@@ -1,0 +1,68 @@
+#container {
+  text-align: center;
+  display: table;
+  width: 100%;
+  height: 100%;
+  background: url("../images/traveller.jpg") fixed no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#container-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%; }
+
+#city-filter {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0px 10px; }
+
+#city-filter select {
+  text-align: center;
+  background: white;
+  color: black; }
+
+#city-filter select:focus {
+  border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a; }
+
+#attribution {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 15px;
+  padding: 10px; }
+
+#brand-logo {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+#brand-logo img {
+  position: absolute;
+  top: 20px;
+  left: 20px; }
+
+#branding-line {
+  font-size: 2em;
+  color: white;
+  padding: 10px 0px;
+  font-weight: 300; }
+
+body {
+  font-family: "Open Sans"; }
+
+select {
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 20px; }
+
+input.select-dropdown {
+  color: white;
+  text-align: center;
+  font-size: 1.5em !important; }
+
+/*# sourceMappingURL=index.css.map */

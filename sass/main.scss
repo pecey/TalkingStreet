@@ -1,0 +1,125 @@
+@import 'partials/constants';
+@import 'partials/materialize';
+.custom-container {
+  width: 85%;
+  margin: 0 auto; }
+
+body {
+  font-family: $baseFont;
+  font-weight: 300; }
+
+.input-field {
+  width: 50%;
+  margin: 0 auto !important; }
+
+nav {
+  background: black;
+  margin-bottom: 3em; }
+
+#brand-logo {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+#brand-logo img {
+  position: absolute;
+  top: 20px;
+  left: 20px; }
+
+.blog-image {
+  max-height: 100%; }
+
+.custom-chip {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 10px;
+  box-shadow: 1px 1px 1px #2F2D2D; }
+
+.card-image {
+  position: relative; }
+
+.card-title {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%; }
+
+.card-content {
+  width: 100%;
+  display: inline-block;
+  font-size: 13px; }
+
+.card-content .row {
+  margin-bottom: 10px; }
+
+.card-map {
+  width: 45%;
+  display: inline-block;
+  padding-right: 0px;
+  margin-left: 5px; }
+
+.card-map iframe {
+  width: 100%; }
+
+hr {
+  border-color: red; }
+
+.location-name {
+  display: inline-block; }
+
+.card-icons {
+  display: inline; }
+
+.card-icons i {
+  font-size: 18px !important; }
+
+.info {
+  display: none; }
+
+.page-footer {
+  background: #1a1f23 !important;
+  color: white; }
+
+.experience-chip {
+  background: #69f0ae; }
+
+.outlet-chip {
+  background: #ffd740; }
+
+.rating {
+  position: absolute;
+  right: 10px;
+  bottom: -15px;
+  z-index: 10;
+  color: white;
+  background: #FF2C2C;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px #5A5A5A; }
+
+.input-field {
+  background: white;
+  height: 60%; }
+
+.mobile-only-filters {
+  background: #ccc; }
+
+@media #{$medium-and-down}{
+  body{
+  font-size: 2em;
+  overflow-x: hidden;
+  }
+  .custom-container{
+    width:95%;
+  }
+  nav{
+    height:100px;
+    margin-bottom:0em;
+  }
+  .mobile-only-filters{
+    .container{
+      width:100%;
+      padding:10px;
+    }
+  }
+}
