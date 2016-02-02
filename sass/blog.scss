@@ -1,0 +1,25 @@
+@import 'globals';
+@import 'custom/navbar';
+@import 'custom/card';
+.blog-title{
+	text-transform:uppercase;
+	font-size:1.5em;
+	font-weight:500;
+} 
+.blog-meta {
+    font-size: 0.7em;
+}
+.blog-at-a-glance{
+	margin-top: 1em;
+	width: 65%;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:0.6em;
+}
+.blog-at-a-glance li{
+	padding-bottom: 10px;
+}
+.blog-at-a-glance i{
+	font-size: 1.2em;
+    padding-right: 10px;
+}
