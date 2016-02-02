@@ -8460,6 +8460,10 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
+a {
+  color: black;
+  text-decoration: none; }
+
 .custom-container {
   width: 85%;
   margin: 0 auto; }
@@ -8560,7 +8564,10 @@ hr {
   height: 60%; }
 
 .mobile-only-filters {
-  background: #ccc; }
+  background: #EFE9E9;
+  display: table;
+  width: 100%;
+  height: 100px; }
 
 @media only screen and (max-width: 992px) {
   body {
@@ -8571,12 +8578,14 @@ hr {
     width: 95%; }
 
   nav {
-    height: 100px;
+    height: 150px;
     margin-bottom: 0em; }
 
   .mobile-only-filters .container {
     width: 100%;
-    padding: 10px; }
+    padding: 10px;
+    display: table-cell;
+    vertical-align: middle; }
 
   .material-icons {
     font-size: 1.5em; }
@@ -8592,9 +8601,11 @@ hr {
     text-align: left; }
 
   .side-nav a {
-    font-size: 24px;
+    font-size: 1.2em;
     border-bottom: 1px solid #ccc;
-    padding-top: 5px; }
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 15px 0px; }
 
   #brand-logo-mobile-wrapper {
     height: 200px;
@@ -8628,7 +8639,9 @@ hr {
     font-size: 1.2em; }
 
   #mobile-nav {
-    height: 100%; }
+    height: 100%;
+    display: table;
+    width: 100%; }
 
   nav a.button-collapse {
     display: table;
@@ -8639,6 +8652,39 @@ hr {
     height: 100%;
     vertical-align: middle;
     font-size: 2em;
-    padding-left: 1em; } }
+    padding-left: 1em; }
+
+  .bottom-sheet {
+    font-size: 1.2em; }
+    .bottom-sheet .collection .collection-item {
+      margin: 20px;
+      padding: 20px; }
+      .bottom-sheet .collection .collection-item .secondary-content {
+        position: absolute;
+        top: 0.75em;
+        right: 16px; }
+
+  .mobile-only-filters .row .col {
+    position: relative; }
+    .mobile-only-filters .row .col a i {
+      position: absolute;
+      top: 0px;
+      left: 0px; }
+
+  #mobile-nav-search {
+    width: 80%;
+    background: white;
+    height: 60%;
+    margin: 0 auto; }
+
+  #mobile-nav-search-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 80%; }
+    #mobile-nav-search-wrapper input {
+      color: black;
+      font-size: 1.2em;
+      padding: 20px; } }
 
 /*# sourceMappingURL=main.css.map */
