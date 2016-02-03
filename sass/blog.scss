@@ -2,6 +2,9 @@
 @import 'custom/navbar';
 @import 'custom/card';
 
+body{
+	font-family:'Catamaran';
+}
 .blog-title{
 	text-transform:uppercase;
 	font-size:1.5em;

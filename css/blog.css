@@ -42,6 +42,9 @@ nav {
 .card-plain-content ul {
   list-style-type: none; }
 
+body {
+  font-family: 'Catamaran'; }
+
 .blog-title {
   text-transform: uppercase;
   font-size: 1.5em;
