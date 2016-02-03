@@ -1,6 +1,7 @@
 @import 'globals';
 @import 'custom/navbar';
 @import 'custom/card';
+
 .blog-title{
 	text-transform:uppercase;
 	font-size:1.5em;
@@ -16,10 +17,32 @@
 	margin-right:auto;
 	font-size:0.6em;
 }
-.blog-at-a-glance li{
-	padding-bottom: 10px;
-}
 .blog-at-a-glance i{
 	font-size: 1.2em;
     padding-right: 10px;
+}
+.blog-at-a-glance .card-plain{
+	    background: #FBFBFA;
+    color: rgba(0,0,0,0.6);
+    border: 1px solid #D4D4D4;
+}
+
+@media only screen  and (max-width: 992px){
+	.blog-title{
+	    	font-size: 0.8em;
+    		padding: 0.5em;
+    		padding-bottom: 0.2em;
+	}
+	.blog-meta{
+		font-size: 0.5em;
+	}
+	.chip{
+	    font-size: 2em;
+	}
+	.blog-at-a-glance{
+		width: 90%;
+		.card-plain{
+			color:black;
+		}
+	}
 }
