@@ -85,7 +85,21 @@ hr {
   width: 100%;
   height: 100px;
   }
-
+@media #{$large-and-up}{
+  .card-icons{
+    .material-icons{
+      font-size: 1.2em;
+    }
+  }
+  .best-for{
+    .material-icons{
+      font-size:1.2em;
+    }
+  }
+  .card-content{
+    font-size:1em;
+  }
+}
 @media #{$medium-and-down}{
   body{
   font-size: 2em;
