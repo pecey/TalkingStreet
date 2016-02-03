@@ -8460,6 +8460,47 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
+.card-image {
+  position: relative; }
+
+.card-title {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  font-size: 2em; }
+
+.card-content {
+  width: 100%;
+  display: inline-block;
+  font-size: 13px; }
+
+.card-content .row {
+  margin-bottom: 10px; }
+
+.card-map {
+  width: 45%;
+  display: inline-block;
+  padding-right: 0px;
+  margin-left: 5px; }
+
+.card-map iframe {
+  width: 100%; }
+
+.card-icons {
+  display: inline;
+  text-align: right; }
+
+.card-content {
+  font-size: 1.1em; }
+
+.card-plain {
+  padding: 1em; }
+
+.card-plain-title {
+  font-size: 1.3em; }
+
+.card-plain-content ul {
+  list-style-type: none; }
+
 a {
   color: black;
   text-decoration: none; }
@@ -8501,39 +8542,11 @@ nav {
   left: 10px;
   box-shadow: 1px 1px 1px #2F2D2D; }
 
-.card-image {
-  position: relative; }
-
-.card-title {
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%; }
-
-.card-content {
-  width: 100%;
-  display: inline-block;
-  font-size: 13px; }
-
-.card-content .row {
-  margin-bottom: 10px; }
-
-.card-map {
-  width: 45%;
-  display: inline-block;
-  padding-right: 0px;
-  margin-left: 5px; }
-
-.card-map iframe {
-  width: 100%; }
-
 hr {
   border-color: red; }
 
 .location-name {
   display: inline-block; }
-
-.card-icons {
-  display: inline;
-  text-align: right; }
 
 .info {
   display: none; }
@@ -8617,12 +8630,6 @@ hr {
     height: 100%;
     display: table-cell;
     vertical-align: middle; }
-
-  .card-content {
-    font-size: 1.1em; }
-
-  .card .card-title {
-    font-size: 2em; }
 
   .chip {
     height: 2em;

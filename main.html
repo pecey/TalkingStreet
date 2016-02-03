@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Talking Street</title>
+  <!-- Stylesheets-->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel=
   'stylesheet' type='text/css' />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
@@ -9,23 +10,27 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+  <!-- Navbar starts-->
   <nav>
-    <div class="nav-wrapper hide-on-med-and-down">
-     <ul id="nav-mobile" class="right">
-       <li><a href="sass.html"><i class="material-icons left">account_circle</i>Hello, Foodie</a></li>
-     </ul>
-     <div id="brand-logo"><img src=
-      "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png" /></div>
-
-      <form>
-       <div class="valign-wrapper" style="height: 100%;">
-        <div class="input-field valign">
-          <input type="text" class="left custom-search" placeholder="Search" />
+    <!-- Navbar desktop view -->
+      <div class="nav-wrapper hide-on-med-and-down">
+       <ul id="nav-mobile" class="right">
+         <li><a href="sass.html"><i class="material-icons left">account_circle</i>Hello, Foodie</a></li>
+       </ul>
+       <div id="brand-logo"><img src=
+        "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png" /></div>
+        <!-- Navbar search form desktop view -->
+        <form>
+         <div class="valign-wrapper" style="height: 100%;">
+          <div class="input-field valign">
+            <input type="text" class="left custom-search" placeholder="Search" />
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
 
-  </div>
+    </div>
+    <!-- Navbar desktop view ends here -->
+    <!-- Navbar mobile view -->
   <div id="mobile-nav" class="hide-on-large-only">
     <div id="mobile-nav-search-wrapper">
       <input type="text" id="mobile-nav-search" placeholder="What or where do you want to eat next?">
@@ -48,7 +53,10 @@
           </ul>
           <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">dehaze</i></a>
         </div>
+        <!-- Navbar mobile view ends here -->
       </nav>
+      <!-- Navbar ends here -->
+      <!-- Filters for mobile -->
       <div class="hide-on-large-only mobile-only-filters">
        <div class="row container">
         <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#city-modal"><i class="material-icons">place</i>Bangalore</a></div>
@@ -57,9 +65,8 @@
         <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#outlet-type"><i class="material-icons">local_cafe</i>Outlet Type</a></div>
       </div>
     </div>
-    
-
-  <!--Modals-->
+   <!-- Bottom popups -->
+   <!-- City Selections -->
     <div id="city-modal" class="modal bottom-sheet">
       <div class="modal-content">
         <h1>Select a city</h1>
@@ -71,30 +78,36 @@
         </ul>
       </div>
     </div>
-
+    <!-- Location selection -->
     <div id="location-modal" class="modal bottom-sheet">
       <div class="modal-content">
         <h4>Modal Header</h4>
         <p>A bunch of text</p>
       </div>
-      <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-      </div>
     </div>
-
+    <!-- Cuisine selection -->
     <div id="cuisine-modal" class="modal bottom-sheet">
       <div class="modal-content">
         <h4>Modal Header</h4>
         <p>A bunch of text</p>
       </div>
-      <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-      </div>
     </div>
+    <!-- Bottom popups ends -->
+    <!-- Filters for mobile ends here -->
+    <!--Desktop Structure -->
+    <!-- 
+  
+     .custom-container
+          .row
+              .col l2                             .col l8                       .col l2
+              [Desktop Filters]                 [Center Panel]                [Ads over here]
+              [Collapsible]                [Outlets followed by blogs]
 
+    -->
 
-    <div class="custom-container">
+   <div class="custom-container">
       <div class="row" >
+         <!-- Desktop Filters-->
         <div class="col l2 hide-on-med-and-down" id="left-panel">
           <ul class="collapsible" data-collapsible="accordion">
             <li>
@@ -128,15 +141,15 @@
             </li>
           </ul>
         </div>
-
-        <div class="col s12" id="center-panel">
+  <!-- Content till here is common to inner pages -->
+        <div class="col l8 s12" id="center-panel">
           <div class="row">
             <div class="col s12 l6">
               <div class="blog-card card medium">
                 <div class="blog-image card-image">
                   <div class="chip custom-chip experience-chip">
                     Experience
-                  </div><img src="images/traveller.jpg" /><span class="card-title">Blog
+                  </div><img src="images/traveller.jpg" /><span class="card-image-title">Blog
                   Title</span>
                 </div>
               </div>
@@ -147,7 +160,7 @@
                 <div class="blog-image card-image">
                   <div class="chip custom-chip experience-chip">
                     Experience
-                  </div><img src="images/traveller.jpg" /><span class="card-title">Blog
+                  </div><img src="images/traveller.jpg" /><span class="card-image-title">Blog
                   Title</span>
                 </div>
               </div>
@@ -162,7 +175,7 @@
                     Outlet
                   </div><img src=
                   "images/traveller.jpg" />
-                  <span class="card-title">Kota Kachori</span>
+                  <span class="card-image-title">Kota Kachori</span>
                   <div class="rating"><i class="material-icons">thumb_up</i></div>
                 </div>
 
@@ -208,7 +221,7 @@
                     </div>
                   </div>
                 </div>
-
+                <!-- Outlet card begins -->
                 <div class="col s12 l4">
                   <div class="card">
                     <div class="card-image">
@@ -216,7 +229,7 @@
                         Outlet
                       </div><img src=
                       "images/traveller.jpg" />
-                      <span class="card-title">Kota Kachori</span>
+                      <span class="card-image-title">Kota Kachori</span>
                       <div class="rating"><i class="material-icons">thumb_up</i></div>
                     </div>
 
@@ -235,7 +248,7 @@
                        </div>
                      </div>
                      <hr />
-
+                      <!-- Best for begins -->
                      <div class="best-for">
                       <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Pyaz
                         Kachoris</span></p>
@@ -250,7 +263,8 @@
                           <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Sabudana
                             Khichdi</span></p>
                           </div>
-
+                          <!-- Best for ends -->
+                          <!-- Extra information -->
                           <div class="info">
                             <p>Phone Number</p>
 
@@ -258,6 +272,7 @@
 
                             <p>Seating</p>
                           </div>
+                          <!-- Extra information ends -->
                         </div>
                       </div>
                     </div>
@@ -269,7 +284,7 @@
                             Outlet
                           </div><img src=
                           "images/traveller.jpg" />
-                          <span class="card-title">Kota Kachori</span>
+                          <span class="card-image-title">Kota Kachori</span>
                           <div class="rating"><i class="material-icons">thumb_up</i></div>
                         </div>
 
@@ -316,7 +331,7 @@
                         </div>
                       </div>
                     </div>
-
+                    <!-- Ads panel-->
                     <div class="col l2 s12" id="right-panel">
                      <div class="row">
                       <div class="col s12" style="height:200px; background: #ccc"></div>
@@ -325,6 +340,7 @@
 
                     </div>
                   </div>
+                  <!-- Ads Panel ends over here -->
                 </div>
               </div>
               <footer class="page-footer hide-on-med-and-down">

@@ -1,5 +1,6 @@
 @import 'partials/constants';
 @import 'partials/materialize';
+@import 'custom/card';
 a{
   color:black;
   text-decoration:none;
@@ -41,29 +42,7 @@ nav {
   left: 10px;
   box-shadow: 1px 1px 1px #2F2D2D; }
 
-.card-image {
-  position: relative; }
 
-.card-title {
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%; }
-
-.card-content {
-  width: 100%;
-  display: inline-block;
-  font-size: 13px; }
-
-.card-content .row {
-  margin-bottom: 10px; }
-
-.card-map {
-  width: 45%;
-  display: inline-block;
-  padding-right: 0px;
-  margin-left: 5px; }
-
-.card-map iframe {
-  width: 100%; }
 
 hr {
   border-color: red; }
@@ -71,10 +50,7 @@ hr {
 .location-name {
   display: inline-block; }
 
-.card-icons {
-  display: inline; 
-  text-align:right;
-}
+
 .info {
   display: none; }
 
@@ -164,12 +140,7 @@ hr {
     display: table-cell;
     vertical-align: middle;
   }
-  .card-content{
-  font-size:1.1em;
-  }
-  .card .card-title{
-      font-size: 2em;
-  }
+ 
   .chip{
     height: 2em;
     font-size: 1em;
