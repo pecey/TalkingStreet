@@ -1,4 +1,11 @@
-@import '../globals';
+@import 'partials/constants';
+
 nav{
-	background-color:$navbar-background-color
+	background-color:#212121;
+}
+@media #{$medium-and-down}{
+	nav{
+		height:150px;
+		margin-bottom:0em;
+	}
 }
