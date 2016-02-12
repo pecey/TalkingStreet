@@ -16,7 +16,7 @@
     <!-- Navbar desktop view -->
       <div class="nav-wrapper hide-on-med-and-down">
        <ul id="nav-mobile" class="right">
-         <li><a href="sass.html"><i class="material-icons left">account_circle</i>Hello, Foodie</a></li>
+         <li><a href="#login-signup-modal" class="modal-trigger"><i class="material-icons left">account_circle</i>Hello, Foodie</a></li>
        </ul>
        <div id="brand-logo"><img src=
         "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png" /></div>
@@ -142,7 +142,11 @@
               </div>
 
               <div class="collapsible-body">
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p><input type="radio" class="with-gap" name="location" id="koramangala-radio"><label for="koramangala-radio">Koramangala</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="indiranagar-radio"><label for="indiranagar-radio">Indiranagar</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="domlur-radio"><label for="domlur-radio">Domlur</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="shivaji-nagar-radio"><label for="shivaji-nagar-radio">Shivaji Nagar</label></p>
+                <p style="text-align: right;"><a class="modal-trigger" href="#location-desktop-modal">View More</a></p>
               </div>
             </li>
 
@@ -152,10 +156,57 @@
               </div>
 
               <div class="collapsible-body">
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p><input type="radio" class="with-gap" name="category" id="chaat-radio"><label for="chaat-radio">Chaat</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="sweets-radio"><label for="sweets-radio">Sweets</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="north-indian-radio"><label for="north-indian-radio">North Indian</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="south-indian-radio"><label for="south-indian-radio">South Indian</label></p>
+                <p style="text-align: right;"><a class="modal-trigger" href="#category-desktop-modal">View More</a></p>
               </div>
             </li>
+              <li>
+              <div class="collapsible-header">
+                <i class="material-icons">local_cafe</i>Outlet Type
+              </div>
+
+              <div class="collapsible-body">
+                <p><input type="checkbox" id="cafe-checkbox"><label for="cafe-checkbox">Cafe</label></p>
+                <p><input type="checkbox" id="bakery-checkbox"><label for="bakery-checkbox">Bakery</label></p>
+                <p><input type="checkbox" id="legendary-checkbox"><label for="legendary-checkbox">Legendary</label></p>
+                <p><input type="checkbox" id="local-checkbox"><label for="local-checkbox">Local</label></p>
+                <p><input type="checkbox" id="street-checkbox"><label for="street-checkbox">Street</label></p>
+              </div>
+            </li>
+
           </ul>
+        </div>
+        <!-- Login and sign up filters -->
+        <div id="login-signup-modal" class="modal">
+          <div class="modal-content">
+            <div class="row">
+              <div class="col l6">
+                <h4>Login</h4>
+                <form>
+                  
+                </form>
+              </div>
+              <div class="col l6">
+                <h4>Signup</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modals for filters -->
+        <div id="location-desktop-modal" class="modal">
+          <div class="modal-content">
+            <h4>Select a location</h4>
+          </div>
+        </div>
+
+         <div id="category-desktop-modal" class="modal">
+          <div class="modal-content">
+            <h4>Select a category</h4>
+          </div>
         </div>
   <!-- Content till here is common to inner pages -->
         <div class="col l8 s12" id="center-panel">
@@ -221,7 +272,7 @@
 
                       <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Jalebi</span></p>
 
-                      <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Sweets</span></p>
+                      <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">sweets-radio</span></p>
 
                       <p><i class="material-icons" class="best-for-icon">grade</i><span style="margin:5px">Sabudana
                         Khichdi</span></p>
@@ -406,7 +457,6 @@
     edge: 'right'
   });
     $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal();
   });
        
