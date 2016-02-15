@@ -236,7 +236,7 @@
                 <div class="blog-image card-image">
                   <div class="chip custom-chip experience-chip">
                     Experience
-                  </div><img src="images/traveller.jpg" /><span class="card-title">Chasing Hunger: Hunger Chase Foodtruck in Sahakar Nagar</span>
+                  </div><img src="images/traveller.jpg" /><a href="blog.html"><span class="card-title">Chasing Hunger: Hunger Chase Foodtruck in Sahakar Nagar</span></a>
                 </div>
                 <div class="card-content">Food Trucks are a recent addition to Bangalore’s food scene. Though they have not yet taken the city by storm, they are slowly and steadily making inroads. Almost every other month a new food truck joins the list. They seem to be making the right kind of noises and it’s a matter of time before they become part of the city’s street food culture.  The unique selling point of these trucks has to be the price at which they offer good quality food.</div>
               </div>
@@ -247,7 +247,7 @@
                 <div class="blog-image card-image">
                   <div class="chip custom-chip experience-chip">
                     Experience
-                  </div><img src="images/traveller.jpg" /><span class="card-title">Chasing Hunger: Hunger Chase Foodtruck in Sahakar Nagar</span>
+                  </div><img src="images/traveller.jpg" /><a href="blog.html"><span class="card-title">Chasing Hunger: Hunger Chase Foodtruck in Sahakar Nagar</span></a>
                 </div>
                 <div class="card-content">Food Trucks are a recent addition to Bangalore’s food scene. Though they have not yet taken the city by storm, they are slowly and steadily making inroads. Almost every other month a new food truck joins the list. They seem to be making the right kind of noises and it’s a matter of time before they become part of the city’s street food culture.  The unique selling point of these trucks has to be the price at which they offer good quality food.</div>
 
@@ -263,7 +263,7 @@
                     Outlet
                   </div><img src=
                   "images/traveller.jpg" />
-                  <span class="card-title">Kota Kachori</span>
+                  <a href="outlet.html"><span class="card-title">Kota Kachori</span>
                   <div class="rating"><i class="material-icons">thumb_up</i></div>
                 </div>
 
@@ -317,7 +317,7 @@
                         Outlet
                       </div><img src=
                       "images/traveller.jpg" />
-                      <span class="card-title">Kota Kachori</span>
+                      <a href="outlet.html"><span class="card-title">Kota Kachori</span></a>
                       <div class="rating"><i class="material-icons">thumb_up</i></div>
                     </div>
 
@@ -372,7 +372,7 @@
                             Outlet
                           </div><img src=
                           "images/traveller.jpg" />
-                          <span class="card-title">Kota Kachori</span>
+                          <a href="outlet.html"><span class="card-title">Kota Kachori</span></a>
                           <div class="rating"><i class="material-icons">thumb_up</i></div>
                         </div>
 
@@ -490,6 +490,13 @@
       $("#cuisine-modal-trigger").text(cuisine_selected);
       $("#cuisine-collapsible-header span").text(cuisine_selected);
     });
+
+    $("input:radio[name=category]").on('change', function(){
+      var cuisine_selected = $("input:radio[name=category]:checked").val();
+      $("#cuisine-modal-trigger").text(cuisine_selected);
+      $("#cuisine-collapsible-header span").text(cuisine_selected);
+    });
+
   });
 
    
