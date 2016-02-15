@@ -80,33 +80,49 @@
   	<div class="col l8 s12">
   		<!-- Featured Image -->
   		<div class="row">
+      <!-- Featured Image -->
         <div class="col l8 s12 outlet-featured-image">
-  			<div class="outlet-featured-image-overlay">
-  				<div class="outlet-featured-image-overlay-wrapper">
-  			<div class="outlet-name">ABC Outlet</div>
-  			<div class="outlet-type">Outlet Type</div>
-  			<div class="outlet-image-buttons">
-	  			<span class="outlet-review"><button class="btn">Review</button></span>
-	  			<span class="outlet-rating"><button class="btn">Rating</button></span>
-	  			 <a class="btn-floating outlet-share red"><i class="material-icons">add</i></a>
-  			</div>
-  			</div>
-  			</div>
-  		</div>
-      <div class="col l4 s12">
-        <div class="outlet-cuisine outlet-main-info-card card" style="margin-top: 0">
-            <div class="outlet-main-info-card-title">Serves</div><div id="outlet-cuisine-value" class="outlet-main-info-card-data">Chaat</div>
+    			<div class="outlet-featured-image-overlay">
+    				<div class="outlet-featured-image-overlay-wrapper">
+    			<div class="outlet-name">ABC Outlet</div>
+    			<div class="outlet-type">Outlet Type</div>
+    			<div class="outlet-image-buttons">
+  	  			<span class="outlet-review"><button class="btn red">Review</button></span>
+  	  			<span class="outlet-rating"><button class="btn red">Rating</button></span>
+  	  			 <a class="btn-floating outlet-share red"><i class="material-icons">place</i></a>
+    			</div>
+    			</div>
+    			</div>
+  		  </div>
+
+      <!--Serves and Best For-->
+      <div class="col l4 s12" id="serves-and-best-for-pane">
+        <div class="row">
+          <div class="outlet-cuisine outlet-main-info-card card col l12 s12" style="margin-top: 0">
+              <div class="outlet-main-info-card-title">Serves</div>
+              <div id="outlet-cuisine-value" class="outlet-main-info-card-data"><p>Chaat</p></div>
+          </div>
         </div>
-        <div class="outlet-best-for outlet-main-info-card card">
-            <div class="outlet-main-info-card-title">Best for</div><div id="outlet-best-for-value" class="outlet-main-info-card-data"></div>
+        <div class="row">
+          <div class="outlet-best-for outlet-main-info-card card col l12 s12">
+              <div class="outlet-main-info-card-title">Best for</div>
+              <div id="outlet-best-for-value" class="outlet-main-info-card-data"><p>Item A, Item B, Item C, Item D</p></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="outlet-also-serves outlet-main-info-card card col l12 s12">
+            <div class="outlet-main-info-card-title">Also serves</div>
+            <div id="outlet-cuisine-value" class="outlet-main-info-card-data"><p>Item E, Item F, Item G, Item H</p></div>
+          </div>
         </div>
       </div>
-      </div>
+    </div>
+    <!-- Row ends -->
   		<div class="row outlet-meta">
   			<div class="col l12 s12 outlet-main-info-card card">
   				<div class="outlet-address">
             <div class="outlet-main-info-card-title">Address</div>
-  					<address>571, 6th Cross Road, Koramangala 6 Block, Koramangala, Bengaluru, Karnataka 560095, India</address>
+  					<p><address>571, 6th Cross Road, Koramangala 6 Block, Koramangala, Bengaluru, Karnataka 560095, India</address></p>
   				</div>
           <div class="outlet-directions">
             <div class="outlet-main-info-card-title">Directions</div>
@@ -114,11 +130,103 @@
           </div>
   			</div>
         </div>
+    <!-- Row ends -->
         <div class="row outlet-special-information"> 
-  		 			<div class="col l3">K</div>
-  		</div>
+  		 			<div class="col l12 s12 outlet-main-info-card card">
+              <div class="outlet-description">
+                <div class="outlet-main-info-card-title">Description</div>
+                <p>Outlet description goes here. Blah blah blah blah.</p>
+              </div>
+              <div class="outlet-extra-information">
+                <div class="outlet-main-info-card-title">Other information</div>
+                <p>Seating : Yes</p>
+                <p>Phone : 123456789</p>
+              </div>
+            </div>
+  		  </div>
+    <!--Row ends-->
+        <div class="row outlet-photos">
+          <div class="col l4 s12 outlet-main-info-card card">
+            <div class="outlet-photos-wrapper">
+              <div class="outlet-main-info-card-title">Menu</div>
+              <div id="outlet-menu-photos-wrapper">
+                <img src="images/traveller.jpg" class="thumbnail materialboxed">
+                <img src="images/traveller.jpg" class="thumbnail materialboxed">
+              </div>
+            </div>
+          </div>
+          <div class="col l7 offset-l1 s12 outlet-main-info-card card">
+            <div class="outlet-photos-wrapper">
+              <div class="outlet-main-info-card-title">Photos</div>
+                <div id="outlet-other-photos-wrapper">
+                  <img src="images/traveller.jpg" class="thumbnail materialboxed">
+                  <img src="images/traveller.jpg" class="thumbnail materialboxed">
+                  <img src="images/traveller.jpg" class="thumbnail materialboxed">
+                  <img src="images/traveller.jpg" class="thumbnail materialboxed">
+                </div>
+            </div>
+          </div>
+        </div>
+    <!-- Row ends-->
+        <div class="row" id="author-info">
+          <div class="col l4 s0" style="display: table">
+            <div id="author-image">
+              <img src="images/traveller.jpg">
+            </div>
+          </div>
+          <div class="col l8 s12">
+            <div class="row" id="author-name">Anandi Bandopadhyay</div>
+            <div class="row" id="author-bio">
+            Gardening enthusiast, dog lover, closeted chef and a fangirl, Anandi is currently pursuing her Bachelor’s Degree in English in the hopes of making a vocation out of her everlasting love for books. Over the span of nineteen years, she has lived in six cities, including her hometown and current place of residence, Kolkata. She can be found spending her time either curled up with a book or running around the city soaking in the cultural experiences the city has to offer
+            </div>
+          </div>
+        </div>
   	</div>
-  	<div class="col l4 s12"></div>
+    <!-- Left Panel ends-->
+    <!-- Recent posts begins-->
+  	<div class="col l4 s12">
+      <div class="row recent-posts">
+        <div class="left-panel-title">Latest posts</div>
+        <!-- Demo Post-->
+        <div class="col l12 s4 recent-post-wrapper">
+            <div class="recent-post-image">
+              <img src="images/traveller.jpg" class="thumbnail">
+            </div>
+            <div class="recent-post-title">
+              Demo Recent Post
+            </div>
+        </div>
+        <!-- Demo Post ends -->
+        <!-- Demo Post-->
+        <div class="col l12 s4 recent-post-wrapper">
+            <div class="recent-post-image">
+              <img src="images/traveller.jpg" class="thumbnail">
+            </div>
+            <div class="recent-post-title">
+              Demo Recent Post
+            </div>
+        </div>
+        <!-- Demo Post ends -->
+        <!-- Demo Post-->
+        <div class="col l12 s4 recent-post-wrapper">
+            <div class="recent-post-image">
+              <img src="images/traveller.jpg" class="thumbnail">
+            </div>
+            <div class="recent-post-title">
+              Demo Recent Post
+            </div>
+        </div>
+        <!-- Demo Post ends -->
+      </div>
+    </div>
+</div>
 
+</div>
+<!--Custom container ends-->
+<div id="share-love"><a class="btn-floating btn-large red"><i class="large material-icons">person_add</i></a></div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" type=
+   "text/javascript">
+   </script>
 </body>
 </html>
