@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
+   <link rel="stylesheet" type="text/css" href="../animate.css">
 </head>
 <body>
   <!-- Navbar starts-->
@@ -41,13 +42,13 @@
         "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png"/></div></li>
         <li>
           <ul id="mobile-nav-menu">
-                <li><a href="#!">Login</a></li>
+                <li><a href="#login-signup-modal" class="modal-trigger">Login</a></li>
                 <li><a href="#!">Suggest A Joint</a></li>
                 <li><a href="#!">Subscribe</a></li>  
-                <li><a href="#!">About Us</a></li>
-                <li><a href="#!">The Team</a></li>
-                <li><a href="#!">Street Food Club</a></li>
-                <li><a href="#!">Hygiene</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="the-team.html">The Team</a></li>
+                <li><a href="street-food-club.html">Street Food Club</a></li>
+                <li><a href="hygiene.html">Hygiene</a></li>
               </ul>
             </li>
       
@@ -60,10 +61,10 @@
       <!-- Filters for mobile -->
       <div class="hide-on-large-only mobile-only-filters">
        <div class="row container">
-        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#city-modal"><i class="material-icons">place</i>Bangalore</a></div>
-        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#location-modal"><i class="material-icons">explore</i>Location</a></div>
-        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#cuisine-modal"><i class="material-icons">local_dining</i>Category</a></div>
-        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#outlet-type"><i class="material-icons">local_cafe</i>Outlet Type</a></div>
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#city-modal"><i class="material-icons">place</i><span id="city-modal-trigger">Bangalore</span></a></div>
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#location-modal"><i class="material-icons">explore</i><span id="location-modal-trigger">Location</span></a></div>
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#cuisine-modal"><i class="material-icons">local_dining</i><span id="cuisine-modal-trigger">Cuisine</span></a></div>
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#outlet-type-modal"><i class="material-icons">local_cafe</i><span id="outlet-type-modal-trigger">Outlet Type</span></a></div>
       </div>
     </div>
    <!-- Bottom popups -->
@@ -82,15 +83,34 @@
     <!-- Location selection -->
     <div id="location-modal" class="modal bottom-sheet">
       <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <h4>Select a location</h4>
+       <p><input type="radio" class="with-gap" name="location" id="koramangala-radio" value="Koramangala"><label for="koramangala-radio">Koramangala</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="indiranagar-radio" value="Indiranagar"><label for="indiranagar-radio">Indiranagar</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="domlur-radio" value="Domlur"><label for="domlur-radio">Domlur</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="shivaji-nagar-radio" value="Shivaji Nagar"><label for="shivaji-nagar-radio">Shivaji Nagar</label></p>
+                <p style="text-align: right;"><a class="modal-trigger" href="#location-desktop-modal">View More</a></p>
       </div>
     </div>
     <!-- Cuisine selection -->
     <div id="cuisine-modal" class="modal bottom-sheet">
       <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <h4>Select a cuisine</h4>
+         <p><input type="radio" class="with-gap" name="category" id="chaat-radio" value="Chaat"><label for="chaat-radio">Chaat</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="sweets-radio" value="Sweets"><label for="sweets-radio">Sweets</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="north-indian-radio" value="North Indian"><label for="north-indian-radio">North Indian</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="south-indian-radio" value="South Indian"><label for="south-indian-radio">South Indian</label></p>
+                <p style="text-align: right;"><a class="modal-trigger" href="#category-desktop-modal">View More</a></p>
+      </div>
+    </div>
+    <!-- Outlet Type Selection-->
+     <div id="outlet-type-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Select an outlet-type</h4>
+        <p><input type="checkbox" id="cafe-checkbox" value="Cafe"><label for="cafe-checkbox">Cafe</label></p>
+                <p><input type="checkbox" id="bakery-checkbox" value="Bakery"><label for="bakery-checkbox">Bakery</label></p>
+                <p><input type="checkbox" id="legendary-checkbox" value="Legendary"><label for="legendary-checkbox">Legendary</label></p>
+                <p><input type="checkbox" id="local-checkbox" value="Local"><label for="local-checkbox">Local</label></p>
+                <p><input type="checkbox" id="street-checkbox" value="Street"><label for="street-checkbox">Street</label></p>
       </div>
     </div>
     <!-- Bottom popups ends -->
@@ -121,8 +141,8 @@
         <div class="col l2 hide-on-med-and-down" id="left-panel">
           <ul class="collapsible" data-collapsible="accordion">
             <li>
-              <div class="collapsible-header">
-                <i class="material-icons">place</i>Bangalore
+              <div class="collapsible-header" id="city-collapsible-header">
+                <i class="material-icons">place</i><span>Bangalore</span>
               </div>
 
               <div class="collapsible-body">
@@ -131,43 +151,43 @@
             </li>
 
             <li>
-              <div class="collapsible-header active">
-                <i class="material-icons">explore</i>Location
+              <div class="collapsible-header active" id="location-collapsible-header">
+                <i class="material-icons">explore</i><span>Location</span>
               </div>
 
               <div class="collapsible-body">
-                <p><input type="radio" class="with-gap" name="location" id="koramangala-radio"><label for="koramangala-radio">Koramangala</label></p>
-                <p><input type="radio" class="with-gap" name="location" id="indiranagar-radio"><label for="indiranagar-radio">Indiranagar</label></p>
-                <p><input type="radio" class="with-gap" name="location" id="domlur-radio"><label for="domlur-radio">Domlur</label></p>
-                <p><input type="radio" class="with-gap" name="location" id="shivaji-nagar-radio"><label for="shivaji-nagar-radio">Shivaji Nagar</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="koramangala-radio-desktop" value="Koramangala"><label for="koramangala-radio-desktop">Koramangala</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="indiranagar-radio-desktop" value="Indiranagar"><label for="indiranagar-radio-desktop">Indiranagar</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="domlur-radio-desktop" value="Domlur"><label for="domlur-radio-desktop">Domlur</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="shivaji-nagar-radio-desktop" value="Shivaji Nagar"><label for="shivaji-nagar-radio-desktop">Shivaji Nagar</label></p>
                 <p style="text-align: right;"><a class="modal-trigger" href="#location-desktop-modal">View More</a></p>
               </div>
             </li>
 
             <li>
-              <div class="collapsible-header">
-                <i class="material-icons">local_dining</i>Category
+              <div class="collapsible-header" id="cuisine-collapsible-header">
+                <i class="material-icons">local_dining</i><span>Cuisine</span>
               </div>
 
               <div class="collapsible-body">
-                <p><input type="radio" class="with-gap" name="category" id="chaat-radio"><label for="chaat-radio">Chaat</label></p>
-                <p><input type="radio" class="with-gap" name="category" id="sweets-radio"><label for="sweets-radio">Sweets</label></p>
-                <p><input type="radio" class="with-gap" name="category" id="north-indian-radio"><label for="north-indian-radio">North Indian</label></p>
-                <p><input type="radio" class="with-gap" name="category" id="south-indian-radio"><label for="south-indian-radio">South Indian</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="chaat-radio-desktop" value="Chaat"><label for="chaat-radio-desktop">Chaat</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="sweets-radio-desktop" value="Sweets"><label for="sweets-radio-desktop">Sweets</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="north-indian-radio-desktop" value="North Indian"><label for="north-indian-radio-desktop">North Indian</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="south-indian-radio-desktop" value="South Indian"><label for="south-indian-radio-desktop">South Indian</label></p>
                 <p style="text-align: right;"><a class="modal-trigger" href="#category-desktop-modal">View More</a></p>
               </div>
             </li>
               <li>
-              <div class="collapsible-header">
-                <i class="material-icons">local_cafe</i>Outlet Type
+              <div class="collapsible-header" id="outlet-type-collapsible-header">
+                <i class="material-icons">local_cafe</i><span>Outlet Type</span>
               </div>
 
               <div class="collapsible-body">
-                <p><input type="checkbox" id="cafe-checkbox"><label for="cafe-checkbox">Cafe</label></p>
-                <p><input type="checkbox" id="bakery-checkbox"><label for="bakery-checkbox">Bakery</label></p>
-                <p><input type="checkbox" id="legendary-checkbox"><label for="legendary-checkbox">Legendary</label></p>
-                <p><input type="checkbox" id="local-checkbox"><label for="local-checkbox">Local</label></p>
-                <p><input type="checkbox" id="street-checkbox"><label for="street-checkbox">Street</label></p>
+                <p><input type="checkbox" id="cafe-checkbox-desktop"><label for="cafe-checkbox-desktop">Cafe</label></p>
+                <p><input type="checkbox" id="bakery-checkbox-desktop"><label for="bakery-checkbox-desktop">Bakery</label></p>
+                <p><input type="checkbox" id="legendary-checkbox-desktop"><label for="legendary-checkbox-desktop">Legendary</label></p>
+                <p><input type="checkbox" id="local-checkbox-desktop"><label for="local-checkbox-desktop">Local</label></p>
+                <p><input type="checkbox" id="street-checkbox-desktop"><label for="street-checkbox-desktop">Street</label></p>
               </div>
             </li>
 
@@ -209,16 +229,16 @@
           </div>
         </div>
   <!-- Content till here is common to inner pages -->
-        <div class="col l8 s12" id="center-panel">
+        <div class="col l7 s12" id="center-panel">
           <div class="row">
             <div class="col s12 l6">
               <div class="blog-card card medium">
                 <div class="blog-image card-image">
                   <div class="chip custom-chip experience-chip">
                     Experience
-                  </div><img src="images/traveller.jpg" /><span class="card-title">Blog
-                  Title</span>
+                  </div><img src="images/traveller.jpg" /><span class="card-title">Chasing Hunger: Hunger Chase Foodtruck in Sahakar Nagar</span>
                 </div>
+                <div class="card-content">Food Trucks are a recent addition to Bangalore’s food scene. Though they have not yet taken the city by storm, they are slowly and steadily making inroads. Almost every other month a new food truck joins the list. They seem to be making the right kind of noises and it’s a matter of time before they become part of the city’s street food culture.  The unique selling point of these trucks has to be the price at which they offer good quality food.</div>
               </div>
             </div>
 
@@ -227,9 +247,10 @@
                 <div class="blog-image card-image">
                   <div class="chip custom-chip experience-chip">
                     Experience
-                  </div><img src="images/traveller.jpg" /><span class="card-title">Blog
-                  Title</span>
+                  </div><img src="images/traveller.jpg" /><span class="card-title">Chasing Hunger: Hunger Chase Foodtruck in Sahakar Nagar</span>
                 </div>
+                <div class="card-content">Food Trucks are a recent addition to Bangalore’s food scene. Though they have not yet taken the city by storm, they are slowly and steadily making inroads. Almost every other month a new food truck joins the list. They seem to be making the right kind of noises and it’s a matter of time before they become part of the city’s street food culture.  The unique selling point of these trucks has to be the price at which they offer good quality food.</div>
+
               </div>
             </div>
           </div>
@@ -251,7 +272,7 @@
                   "text-align:center"></p>
 
                   <div class="row">
-                   <div class="col l6 s6" class="location-name">
+                   <div class="col l6 s6 location-name">
                      Koromangala
                    </div>
 
@@ -304,7 +325,7 @@
                       <p data-longitude="77.5639761" data-latitude="13.0334194" style=
                       "text-align:center"></p>
                       <div class="row">
-                       <div class="col l6 s6" class="location-name">
+                       <div class="col l6 s6 location-name">
                          Koromangala
                        </div>
 
@@ -356,10 +377,8 @@
                         </div>
 
                         <div class="card-content">
-                          <p data-longitude="77.5639761" data-latitude="13.0334194" style=
-                          "text-align:center"></p>
                           <div class="row">
-                           <div class="col l6 s6" class="location-name">
+                           <div class="col l6 s6 location-name">
                              Koromangala
                            </div>
 
@@ -399,7 +418,7 @@
                       </div>
                     </div>
                     <!-- Ads panel-->
-                    <div class="col l2 s12" id="right-panel">
+                    <div class="col l3 s12" id="right-panel">
                      <div class="row">
                       <div class="col s12" style="height:200px; background: #ccc"></div>
                       <div class="col s12" style="height:200px; background: #ccc"></div>
@@ -416,11 +435,11 @@
                  <div class="col s4 center-align" id="footer-left-pane">
                   <h5>Talking Street</h5>
                   <ul>
-                   <li>about us</li>
+                   <li><a href="about-us.html">about us</a></li>
                    <li>suggest a joint</li>
-                   <li>meet the team</li>
-                   <li>street food club</li>
-                   <li>hygiene</li>
+                   <li><a href="meet-the-team.html">meet the team</a></li>
+                   <li><a href="street-food-club.html">street food club</a></li>
+                   <li><a href="hygiene.html">hygiene</a></li>
                  </ul>
                </div>
                <div class="col s4 center-align" id="footer-center-pane">
@@ -458,8 +477,22 @@
   });
     $(document).ready(function(){
     $('.modal-trigger').leanModal();
+
+    /*Change filter according to selection*/
+    $("input:radio[name=location]").on('change', function(){
+      var location_selected = $("input:radio[name=location]:checked").val();
+      $("#location-modal-trigger").text(location_selected);
+      $("#location-collapsible-header span").text(location_selected);
+    });
+
+    $("input:radio[name=category]").on('change', function(){
+      var cuisine_selected = $("input:radio[name=category]:checked").val();
+      $("#cuisine-modal-trigger").text(cuisine_selected);
+      $("#cuisine-collapsible-header span").text(cuisine_selected);
+    });
   });
-       
+
+   
    </script>
 </body>
 </html>

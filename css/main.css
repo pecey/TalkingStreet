@@ -90,11 +90,22 @@ nav {
   left: 10px;
   box-shadow: 1px 1px 1px #2F2D2D; }
 
+.collapsible-header {
+  font-size: 0.9em; }
+
+.collapsible-body {
+  font-size: 0.8em;
+  padding-left: 15px; }
+
+[type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
+  font-size: 1em; }
+
 hr {
   border-color: red; }
 
 .location-name {
-  display: inline-block; }
+  display: inline-block;
+  font-size: 0.9em; }
 
 .info {
   display: none; }
@@ -112,13 +123,15 @@ hr {
 .rating {
   position: absolute;
   right: 10px;
-  bottom: -15px;
+  bottom: -9px;
   z-index: 10;
   color: white;
   background: #FF2C2C;
-  padding: 10px;
+  padding: 8px;
   border-radius: 50%;
   box-shadow: 1px 1px 1px #5A5A5A; }
+  .rating .material-icons {
+    font-size: 0.8em; }
 
 .input-field {
   background: white;
@@ -141,22 +154,63 @@ hr {
   width: 100%;
   height: 100px; }
 
+/*Card*/
+.blog-card {
+  height: 380px !important; }
+
+.card .card-title {
+  font-size: 1em; }
+
+.card .card-image .card-title {
+  padding: 10px; }
+
+.card-content {
+  padding: 10px;
+  text-overflow: ellipsis;
+  text-align: justify;
+  margin-bottom: 20px; }
+
 @media only screen and (min-width: 993px) {
   .card-icons .material-icons {
-    font-size: 1.2em; }
+    font-size: 1em; }
 
-  .best-for .material-icons {
-    font-size: 1.2em; }
+  .best-for {
+    font-size: 0.8em; }
+    .best-for .material-icons {
+      font-size: 1em; }
 
   .card-content {
-    font-size: 1em; } }
+    font-size: 1em;
+    padding: 10px !important; } }
 @media only screen and (max-width: 992px) {
   body {
     font-size: 2em;
     overflow-x: hidden; }
 
+  .blog-image {
+    max-height: 75% !important; }
+
+  .blog-card .card-content {
+    max-height: 25% !important; }
+
+  .subscribe-me-button {
+    z-index: 100;
+    padding: 10px; }
+    .subscribe-me-button a i.material-icons {
+      font-size: 1.5em; }
+
+  label {
+    color: black;
+    font-size: 0.8em !important; }
+
   .custom-container {
     width: 95%; }
+
+  .blog-card {
+    height: 600px !important; }
+
+  .rating .material-icons {
+    font-size: 1em; }
 
   nav {
     height: 150px;
@@ -175,8 +229,6 @@ hr {
     padding: 1em;
     bottom: -40px;
     right: 20px; }
-    .rating i {
-      font-size: 2em; }
 
   #footer-left-pane {
     text-align: left; }
@@ -210,8 +262,13 @@ hr {
     top: 1em;
     left: 1em; }
 
+  .best-for {
+    font-size: 0.95em; }
+
+  .best-for p span {
+    font-size: 0.8em; }
   .best-for p i {
-    font-size: 1.2em; }
+    font-size: 0.8em; }
 
   #mobile-nav {
     height: 100%;
