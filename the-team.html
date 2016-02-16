@@ -1,0 +1,171 @@
+<html>
+<head>
+	<title>Talking Street</title>
+  <!-- Stylesheets-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel=
+  'stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+  type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+   <link rel="stylesheet" type="text/css" href="../animate.css">
+   <link rel="stylesheet" type="text/css" href="css/street-food-club.css">
+</head>
+<body>
+  <!-- Navbar starts-->
+  <nav>
+    <!-- Navbar desktop view -->
+      <div class="nav-wrapper hide-on-med-and-down">
+       <ul id="nav-mobile" class="right">
+         <li><a href="#login-signup-modal" class="modal-trigger"><i class="material-icons left">account_circle</i>Hello, Foodie</a></li>
+       </ul>
+       <div id="brand-logo"><img src=
+        "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png" /></div>
+        <!-- Navbar search form desktop view -->
+        <form>
+         <div class="valign-wrapper" style="height: 100%;">
+          <div class="input-field valign">
+            <input type="text" class="left custom-search" placeholder="Search" />
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <!-- Navbar desktop view ends here -->
+    <!-- Navbar mobile view -->
+  <div id="mobile-nav" class="hide-on-large-only">
+    <div id="mobile-nav-search-wrapper">
+      <input type="text" id="mobile-nav-search" placeholder="What or where do you want to eat next?">
+    </div>
+    <ul id="slide-out" class="side-nav">
+      <li id="brand-logo-mobile-wrapper"><div id="brand-logo-mobile"><img src=
+        "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png"/></div></li>
+        <li>
+          <ul id="mobile-nav-menu">
+                <li><a href="#login-signup-modal" class="modal-trigger">Login</a></li>
+                <li><a href="#!">Suggest A Joint</a></li>
+                <li><a href="#!">Subscribe</a></li>  
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="the-team.html">The Team</a></li>
+                <li><a href="street-food-club.html">Street Food Club</a></li>
+                <li><a href="hygiene.html">Hygiene</a></li>
+              </ul>
+            </li>
+      
+          </ul>
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">dehaze</i></a>
+        </div>
+        <!-- Navbar mobile view ends here -->
+      </nav>
+      <!-- Navbar ends here -->
+      <!-- Filters for mobile -->
+      <div class="hide-on-large-only mobile-only-filters">
+       <div class="row container">
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#city-modal"><i class="material-icons">place</i><span id="city-modal-trigger">Bangalore</span></a></div>
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#location-modal"><i class="material-icons">explore</i><span id="location-modal-trigger">Location</span></a></div>
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#cuisine-modal"><i class="material-icons">local_dining</i><span id="cuisine-modal-trigger">Cuisine</span></a></div>
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#outlet-type-modal"><i class="material-icons">local_cafe</i><span id="outlet-type-modal-trigger">Outlet Type</span></a></div>
+      </div>
+    </div>
+   <!-- Bottom popups -->
+   <!-- City Selections -->
+    <div id="city-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h1>Select a city</h1>
+        <ul class="collection">
+          <li class="collection-item"><span class="title">Bangalore</span><a href="#!" class="secondary-content"><i class="material-icons">done</i></a></li>
+          <li class="collection-item"><span class="title">Indore</span></li>
+          <li class="collection-item"><span class="title">Goa</span></li>
+          <li class="collection-item"><span class="title">Kolkata</span></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Location selection -->
+    <div id="location-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Select a location</h4>
+       <p><input type="radio" class="with-gap" name="location" id="koramangala-radio" value="Koramangala"><label for="koramangala-radio">Koramangala</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="indiranagar-radio" value="Indiranagar"><label for="indiranagar-radio">Indiranagar</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="domlur-radio" value="Domlur"><label for="domlur-radio">Domlur</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="shivaji-nagar-radio" value="Shivaji Nagar"><label for="shivaji-nagar-radio">Shivaji Nagar</label></p>
+                <p style="text-align: right;"><a class="modal-trigger" href="#location-desktop-modal">View More</a></p>
+      </div>
+    </div>
+    <!-- Cuisine selection -->
+    <div id="cuisine-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Select a cuisine</h4>
+         <p><input type="radio" class="with-gap" name="category" id="chaat-radio" value="Chaat"><label for="chaat-radio">Chaat</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="sweets-radio" value="Sweets"><label for="sweets-radio">Sweets</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="north-indian-radio" value="North Indian"><label for="north-indian-radio">North Indian</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="south-indian-radio" value="South Indian"><label for="south-indian-radio">South Indian</label></p>
+                <p style="text-align: right;"><a class="modal-trigger" href="#category-desktop-modal">View More</a></p>
+      </div>
+    </div>
+    <!-- Outlet Type Selection-->
+     <div id="outlet-type-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Select an outlet-type</h4>
+        <p><input type="checkbox" id="cafe-checkbox" value="Cafe"><label for="cafe-checkbox">Cafe</label></p>
+                <p><input type="checkbox" id="bakery-checkbox" value="Bakery"><label for="bakery-checkbox">Bakery</label></p>
+                <p><input type="checkbox" id="legendary-checkbox" value="Legendary"><label for="legendary-checkbox">Legendary</label></p>
+                <p><input type="checkbox" id="local-checkbox" value="Local"><label for="local-checkbox">Local</label></p>
+                <p><input type="checkbox" id="street-checkbox" value="Street"><label for="street-checkbox">Street</label></p>
+      </div>
+    </div>
+
+     <div class="custom-container flow-text">
+      <div class="row center page-header">
+        Meet the team
+      </div>
+      <hr>
+      <div class="page-content">
+        <div class="row">
+               Talking Street is a gastronomical labour of love, built by many contributing artists.
+        </div>
+        <div class="street-food-club-members">
+          <div class="row member-card card">
+            <div class="member-image col l3">
+              <img src="images/rupam.jpg">
+            </div>
+            <div class="member-text col l9">
+                <div class="member-name row"><div>Rupam Gogoi</div><div style="text-transform: none; font-weight: 300"><em>Chief Foodie - Growth and Product Development</em></div></div>
+                <div class="member-info row">Rupam is a genuine foodie with a love for all things good & food, an amateur musician and a passionate writer. Believes in the happiness of being and works consistently towards imbibing this in the product he makes/works on. Non-believer in the concept of creating uselessly feature driven apps. Currently he manages the product & growth functions for Talking Street & is also building a travel product called Loaferr.</div>
+            </div>
+          </div>
+
+           <div class="row member-card card">
+            <div class="member-image col l3">
+              <img src="images/rupam.jpg">
+            </div>
+            <div class="member-text col l9">
+                <div class="member-name row"><div>Rupam Gogoi</div><div style="text-transform: none; font-weight: 300"><em>Chief Foodie - Growth and Product Development</em></div></div>
+                <div class="member-info row">Rupam is a genuine foodie with a love for all things good & food, an amateur musician and a passionate writer. Believes in the happiness of being and works consistently towards imbibing this in the product he makes/works on. Non-believer in the concept of creating uselessly feature driven apps. Currently he manages the product & growth functions for Talking Street & is also building a travel product called Loaferr.</div>
+            </div>
+          </div>
+
+           <div class="row member-card card">
+            <div class="member-image col l3">
+              <img src="images/rupam.jpg">
+            </div>
+            <div class="member-text col l9">
+               <div class="member-name row"><div>Rupam Gogoi</div><div style="text-transform: none; font-weight: 300"><em>Chief Foodie - Growth and Product Development</em></div></div>
+                <div class="member-info row">Rupam is a genuine foodie with a love for all things good & food, an amateur musician and a passionate writer. Believes in the happiness of being and works consistently towards imbibing this in the product he makes/works on. Non-believer in the concept of creating uselessly feature driven apps. Currently he manages the product & growth functions for Talking Street & is also building a travel product called Loaferr.</div>
+            </div>
+          </div>
+
+           <div class="row member-card card">
+            <div class="member-image col l3">
+              <img src="images/rupam.jpg">
+            </div>
+            <div class="member-text col l9">
+                <div class="member-name row"><div>Rupam Gogoi</div><div style="text-transform: none; font-weight: 300"><em>Chief Foodie - Growth and Product Development</em></div></div>
+                <div class="member-info row">Rupam is a genuine foodie with a love for all things good & food, an amateur musician and a passionate writer. Believes in the happiness of being and works consistently towards imbibing this in the product he makes/works on. Non-believer in the concept of creating uselessly feature driven apps. Currently he manages the product & growth functions for Talking Street & is also building a travel product called Loaferr.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
