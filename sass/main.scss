@@ -41,7 +41,10 @@ nav {
   z-index: 10;
   top: 10px;
   left: 10px;
-  box-shadow: 1px 1px 1px #2F2D2D; }
+  box-shadow: 1px 1px 1px #2F2D2D; 
+  border-radius:0px;
+  padding: 0px 5px;
+  }
 
 .collapsible-header{
       font-size: 0.9em;
@@ -70,10 +73,14 @@ hr {
   color: white; }
 
 .experience-chip {
-  background: #69f0ae; }
+  /*background: #69f0ae;*/
+  background: #DCFFA4;
+   }
 
 .outlet-chip {
-  background: #ffd740; }
+  /*background: #ffd740;*/
+  background: #DDE89B;
+ }
 
 .rating {
   position: absolute;
