@@ -173,7 +173,7 @@ hr {
 
 /*Card*/
 .blog-card {
-  height: 380px !important; }
+  height: auto !important; }
 
 .card .card-title {
   font-size: 1em; }

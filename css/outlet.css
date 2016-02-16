@@ -6,6 +6,10 @@
   height: 100px;
   padding: 10px; }
 
+.outlet-rating {
+  color: white;
+  margin-left: 10px; }
+
 .material-placeholder {
   display: inline; }
 
@@ -119,6 +123,7 @@ address {
   padding: 10px 0px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16) inset, 0 2px 10px 0 rgba(0, 0, 0, 0.12) inset;
   background: #eee;
-  margin-top: 10px; }
+  width: 250px;
+  margin: 10px auto; }
 
 /*# sourceMappingURL=outlet.css.map */
