@@ -1,0 +1,143 @@
+<html>
+<head>
+	<title>Talking Street</title>
+  <!-- Stylesheets-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel=
+  'stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+  type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+   <link rel="stylesheet" type="text/css" href="../animate.css">
+   <link rel="stylesheet" type="text/css" href="css/street-food-club.css">
+</head>
+<body>
+  <!-- Navbar starts-->
+  <nav>
+    <!-- Navbar desktop view -->
+      <div class="nav-wrapper hide-on-med-and-down">
+       <ul id="nav-mobile" class="right">
+         <li><a href="#login-signup-modal" class="modal-trigger"><i class="material-icons left">account_circle</i>Hello, Foodie</a></li>
+       </ul>
+       <div id="brand-logo"><img src=
+        "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png" /></div>
+        <!-- Navbar search form desktop view -->
+        <form>
+         <div class="valign-wrapper" style="height: 100%;">
+          <div class="input-field valign">
+            <input type="text" class="left custom-search" placeholder="Search" />
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <!-- Navbar desktop view ends here -->
+    <!-- Navbar mobile view -->
+  <div id="mobile-nav" class="hide-on-large-only">
+    <div id="mobile-nav-search-wrapper">
+      <input type="text" id="mobile-nav-search" placeholder="What or where do you want to eat next?">
+    </div>
+    <ul id="slide-out" class="side-nav">
+      <li id="brand-logo-mobile-wrapper"><div id="brand-logo-mobile"><img src=
+        "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png"/></div></li>
+        <li>
+          <ul id="mobile-nav-menu">
+                <li><a href="#login-signup-modal" class="modal-trigger">Login</a></li>
+                <li><a href="#!">Suggest A Joint</a></li>
+                <li><a href="#!">Subscribe</a></li>  
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="the-team.html">The Team</a></li>
+                <li><a href="street-food-club.html">Street Food Club</a></li>
+                <li><a href="hygiene.html">Hygiene</a></li>
+              </ul>
+            </li>
+      
+          </ul>
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">dehaze</i></a>
+        </div>
+        <!-- Navbar mobile view ends here -->
+      </nav>
+      <!-- Navbar ends here -->
+      <!-- Filters for mobile -->
+      <div class="hide-on-large-only mobile-only-filters">
+       <div class="row container">
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#city-modal"><i class="material-icons">place</i><span id="city-modal-trigger">Bangalore</span></a></div>
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#location-modal"><i class="material-icons">explore</i><span id="location-modal-trigger">Location</span></a></div>
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#cuisine-modal"><i class="material-icons">local_dining</i><span id="cuisine-modal-trigger">Cuisine</span></a></div>
+        <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#outlet-type-modal"><i class="material-icons">local_cafe</i><span id="outlet-type-modal-trigger">Outlet Type</span></a></div>
+      </div>
+    </div>
+   <!-- Bottom popups -->
+   <!-- City Selections -->
+    <div id="city-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h1>Select a city</h1>
+        <ul class="collection">
+          <li class="collection-item"><span class="title">Bangalore</span><a href="#!" class="secondary-content"><i class="material-icons">done</i></a></li>
+          <li class="collection-item"><span class="title">Indore</span></li>
+          <li class="collection-item"><span class="title">Goa</span></li>
+          <li class="collection-item"><span class="title">Kolkata</span></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Location selection -->
+    <div id="location-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Select a location</h4>
+       <p><input type="radio" class="with-gap" name="location" id="koramangala-radio" value="Koramangala"><label for="koramangala-radio">Koramangala</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="indiranagar-radio" value="Indiranagar"><label for="indiranagar-radio">Indiranagar</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="domlur-radio" value="Domlur"><label for="domlur-radio">Domlur</label></p>
+                <p><input type="radio" class="with-gap" name="location" id="shivaji-nagar-radio" value="Shivaji Nagar"><label for="shivaji-nagar-radio">Shivaji Nagar</label></p>
+                <p style="text-align: right;"><a class="modal-trigger" href="#location-desktop-modal">View More</a></p>
+      </div>
+    </div>
+    <!-- Cuisine selection -->
+    <div id="cuisine-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Select a cuisine</h4>
+         <p><input type="radio" class="with-gap" name="category" id="chaat-radio" value="Chaat"><label for="chaat-radio">Chaat</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="sweets-radio" value="Sweets"><label for="sweets-radio">Sweets</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="north-indian-radio" value="North Indian"><label for="north-indian-radio">North Indian</label></p>
+                <p><input type="radio" class="with-gap" name="category" id="south-indian-radio" value="South Indian"><label for="south-indian-radio">South Indian</label></p>
+                <p style="text-align: right;"><a class="modal-trigger" href="#category-desktop-modal">View More</a></p>
+      </div>
+    </div>
+    <!-- Outlet Type Selection-->
+     <div id="outlet-type-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Select an outlet-type</h4>
+        <p><input type="checkbox" id="cafe-checkbox" value="Cafe"><label for="cafe-checkbox">Cafe</label></p>
+                <p><input type="checkbox" id="bakery-checkbox" value="Bakery"><label for="bakery-checkbox">Bakery</label></p>
+                <p><input type="checkbox" id="legendary-checkbox" value="Legendary"><label for="legendary-checkbox">Legendary</label></p>
+                <p><input type="checkbox" id="local-checkbox" value="Local"><label for="local-checkbox">Local</label></p>
+                <p><input type="checkbox" id="street-checkbox" value="Street"><label for="street-checkbox">Street</label></p>
+      </div>
+    </div>
+
+    <div class="custom-container flow-text">
+      <div class="row center page-header">
+        Hygiene and Talking Street
+      </div>
+      <hr>
+      <div class="page-content">
+        <div class="row">
+               Understandably, hygiene is a big concern while considering a street food soiree. And it should be. That’s why, we at Talking Street take it very, very seriously.
+ 
+Let us start by telling you that Talking Street is a curated set of street food outlets. What that means is that every street food vendor or every small street-side eatery does not make it to Talking Street.
+ 
+The first thing we check before deciding to feature a particular joint, is whether it meets our internal hygiene requirements. Only outlets that have basic hygiene practices in place get featured.
+ 
+Once we are convinced about the hygiene, popularity is the next big criteria. We pick the most popular joints because we believe that popularity is an indicator of freshness, apart from taste. That is, the more an outlet sells, the higher are the chances that its ingredients and food is perfectly fresh. Popularity also cues consistency in delivering great tasting food.
+ 
+Finally, of course, we do a check on the taste of the food ourselves as well as through the experiences of people who are eating at a joint.
+ 
+Joints and vendors who meet these criteria are featured on Talking Street’s pages.
+ 
+There is magic to eating on the street and the experience cannot be rivaled by any fine-dine restaurant. There are some simple rules to keep in mind while embarking on a street food eating spree, that we have put together in this article. Keep these in mind and chances are you will have exciting stories to narrate at the end of your street food adventures.
+        </div>
+       
+      </div>
+    </div>
+  </body>
+</html>
