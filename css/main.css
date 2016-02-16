@@ -48,6 +48,19 @@ nav {
   nav {
     height: 150px;
     margin-bottom: 0em; } }
+/*Checkbox*/
+[type="checkbox"]:checked + label:before {
+  top: 5px;
+  left: 1px;
+  width: 7px;
+  height: 13px; }
+
+[type="checkbox"] + label:before {
+  top: 4px;
+  left: 3px;
+  width: 15px;
+  height: 15px; }
+
 a {
   color: black;
   text-decoration: none; }
@@ -173,6 +186,30 @@ hr {
   text-overflow: ellipsis;
   text-align: justify;
   margin-bottom: 20px; }
+
+.blog-card .card-content {
+  padding: 0px 10px 0px !important;
+  line-height: 1.8em;
+  max-height: 5.4em !important;
+  overflow: hidden;
+  margin-right: -1em;
+  padding-right: 1em;
+  position: relative; }
+
+.blog-card .card-content:before {
+  content: '...';
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+
+.blog-card .card-content:after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: white; }
 
 @media only screen and (min-width: 993px) {
   .card-icons .material-icons {
