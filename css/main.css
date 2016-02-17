@@ -67,7 +67,11 @@ nav {
 
 .navbar-login {
   position: absolute;
-  right: 10px; }
+  right: 10px;
+  top: 0px; }
+
+#desktop-nav-search {
+  position: absolute; }
 
 .collapsible-header {
   min-height: 2.5rem;
@@ -182,7 +186,7 @@ hr {
   z-index: 10;
   color: white;
   background: #FF2C2C;
-  padding: 8px;
+  padding: 4px 8px;
   border-radius: 50%;
   box-shadow: 1px 1px 1px #5A5A5A; }
   .rating .material-icons {
