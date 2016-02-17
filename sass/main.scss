@@ -8,7 +8,18 @@
     width: 7px;
     height: 13px;
   }
-
+.ads-card{
+  height:250px;
+  background: #ccc;
+  padding: 0px !important;
+  margin-bottom: 10px;
+  &:first-child{
+  margin-top:0.5rem;
+  }
+  img{
+       box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  }
+}
 .collapsible-header{
   min-height: 2.5rem;
   line-height:2.5rem;
@@ -17,6 +28,9 @@
     font-size:1.3rem;
     margin-right:0.2rem;
   }
+}
+.btn-floating.btn-large i {
+  line-height: 59.5px;
 }
 .collapsible-body{
   p{
@@ -438,4 +452,17 @@ hr {
       margin-bottom:5px;
     }
   }
+}
+/* Modals */
+
+.modal-desktop-content{
+  label{
+     color: black;
+     font-size:0.8em;
+  }
+}
+
+.modal-desktop-title{
+  border-bottom: 1px solid #F44336;
+  padding-bottom: 5px;
 }

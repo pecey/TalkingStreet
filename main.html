@@ -132,7 +132,7 @@
 
   <div class="subscribe-me-button" style="position:fixed; bottom: 45px; right: 24px;">
     <a class="btn-floating btn-large red modal-trigger" href="#subscribe-me-modal">
-      <i class="large material-icons">reorder</i>
+      <i class="large material-icons">message</i>
     </a>
   </div>
 
@@ -150,7 +150,9 @@
               </div>
 
               <div class="collapsible-body">
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p><input type="checkbox" class="with-gap" name="location" id="koramangala-checkbox-desktop" value="Koramangala"><label for="koramangala-checkbox-desktop">Koramangala</label></p>
+                <p><input type="checkbox" class="with-gap" name="location" id="indiranagar-checkbox-desktop" value="Indiranagar"><label for="indiranagar-checkbox-desktop">Indiranagar</label></p>
+                <p><input type="checkbox" class="with-gap" name="location" id="domlur-checkbox-desktop" value="Domlur"><label for="domlur-checkbox-desktop">Domlur</label></p>
               </div>
             </li>
 
@@ -216,14 +218,38 @@
 
         <!-- Modals for filters -->
         <div id="location-desktop-modal" class="modal">
-          <div class="modal-content">
-            <h4>Select a location</h4>
+          <div class="modal-content row">
+            <div class="modal-desktop-title">Showing locations in Bangalore</div>
+            <div class="modal-desktop-content">
+              <div class="col l6 s12">
+                <p><input type="checkbox" name="location" id="koramangala-checkbox-modal" value="Koramangala"><label for="koramangala-checkbox-modal">Koramangala</label></p>
+                <p><input type="checkbox" name="location" id="indiranagar-checkbox-modal" value="Indiranagar"><label for="indiranagar-checkbox-modal">Indiranagar</label></p>
+                <p><input type="checkbox" name="location" id="domlur-checkbox-modal" value="Domlur"><label for="domlur-checkbox-modal">Domlur</label></p>
+                <p><input type="checkbox" name="location" id="shivaji-nagar-checkbox-modal" value="Shivaji Nagar"><label for="shivaji-nagar-checkbox-modal">Shivaji Nagar</label></p>
+              </div>
+              <div class="col l6 s12">
+                 <p><input type="checkbox" name="location" id="HSR-checkbox-modal" value="HSR"><label for="HSR-checkbox-modal">HSR Layout</label></p>
+                <p><input type="checkbox" name="location" id="oar-checkbox-modal" value="oar"><label for="oar-checkbox-modal">Old Airport Road</label></p>
+              </div>
+            </div>
           </div>
         </div>
 
          <div id="category-desktop-modal" class="modal">
-          <div class="modal-content">
-            <h4>Select a category</h4>
+          <div class="modal-content row">
+            <div class="modal-desktop-title">Showing cuisines</div>
+            <div class="modal-desktop-content">
+              <div class="col l6 s12">
+                <p><input type="checkbox" name="category" id="chaat-checkbox-modal" value="Chaat"><label for="chaat-checkbox-modal">Chaat</label></p>
+                <p><input type="checkbox" name="category" id="sweets-checkbox-modal" value="Sweets"><label for="sweets-checkbox-modal">Sweets</label></p>
+                <p><input type="checkbox" name="category" id="north-indian-checkbox-modal" value="North Indian"><label for="north-indian-checkbox-modal">North Indian</label></p>
+                <p><input type="checkbox" name="category" id="south-indian-checkbox-modal" value="South Indian"><label for="south-indian-checkbox-modal">South Indian</label></p>
+              </div>
+              <div class="col l6 s12">
+                <p><input type="checkbox" name="category" id="panipuri-checkbox-modal" value="Panipuri"><label for="panipuri-checkbox-modal">Panipuri</label></p>
+                <p><input type="checkbox" name="category" id="chinese-checkbox-modal" value="Chinese"><label for="chinese-checkbox-modal">Chinese</label></p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -234,7 +260,7 @@
         </div>
   <!-- Content till here is common to inner pages -->
         <div class="col l7 s12" id="center-panel">
-          <div class="row">
+          <div class="row" style="margin-bottom: 0px;">
             <div class="col s12 l6">
               <div class="blog-card card medium">
                 <div class="blog-image card-image">
@@ -258,12 +284,21 @@
                     Experience
                   </div><img src="images/traveller.jpg" /><a href="blog.html"><span class="card-title">Chasing Hunger: Hunger Chase Foodtruck in Sahakar Nagar</span></a>
                 </div>
-                <div class="card-content"></div>
+                <div class="card-content">
+                  <p><em style="color: #F44336">By Anandi Bandopadhyay</em></p>
+                  <hr>
+                  <p><i class="material-icons">place</i>Bangalore</p>
+                  <p><i class="material-icons">local_dining</i>Chaat</p>
+                </div>
 
               </div>
             </div>
           </div>
-
+          <!-- Blogs view more -->
+          <div class="row" style="position: relative;">
+            <div style="width: 100%; text-align: right;position: absolute; right: 20px;"><i class="material-icons" style="font-size:2em">more_horiz</i></div>
+          </div>
+          <!-- Blogs view more -->
           <div class="row">
             <div class="col s12 l4">
               <div class="card">
@@ -273,7 +308,7 @@
                   </div><img src=
                   "images/traveller.jpg" />
                   <a href="outlet.html"><span class="card-title">Kota Kachori</span></a>
-                  <div class="rating"><i class="material-icons">thumb_up</i></div>
+                  <div class="rating"><i class="material-icons">share</i></div>
                 </div>
 
                 <div class="card-content">
@@ -288,7 +323,6 @@
                    <div class="col l6 s4 card-icons">
                      <a target="_blank" href="http://maps.google.com/?q=12.974802219309,77.606051936746"><i class="material-icons">place</i></a>
                      <i class="material-icons" id="info-circle">error</i>
-                     <i class="material-icons">share</i>
                    </div>
                  </div>
                  <hr />
@@ -327,7 +361,7 @@
                       </div><img src=
                       "images/traveller.jpg" />
                       <a href="outlet.html"><span class="card-title">Kota Kachori</span></a>
-                      <div class="rating"><i class="material-icons">thumb_up</i></div>
+                      <div class="rating"><i class="material-icons">share</i></div>
                     </div>
 
                     <div class="card-content">
@@ -341,7 +375,6 @@
                        <div class="col l6 s4 card-icons">
                          <a target="_blank" href="http://maps.google.com/?q=12.974802219309,77.606051936746"><i class="material-icons">place</i></a>
                          <i class="material-icons" id="info-circle">error</i>
-                         <i class="material-icons">share</i>
                        </div>
                      </div>
                      <hr />
@@ -381,7 +414,7 @@
                             Outlet
                           </div><img src="images/traveller.jpg" />
                           <a href="outlet.html"><span class="card-title">Kota Kachori</span></a>
-                          <div class="rating"><i class="material-icons">thumb_up</i></div>
+                          <div class="rating"><i class="material-icons">share</i></div>
                         </div>
 
                         <div class="card-content">
@@ -393,7 +426,6 @@
                            <div class="col l6 s4 card-icons">
                              <a target="_blank" href="http://maps.google.com/?q=12.974802219309,77.606051936746"><i class="material-icons">place</i></a>
                              <i class="material-icons" id="info-circle">error</i>
-                             <i class="material-icons">share</i>
                            </div>
                          </div>
                          <hr />
@@ -429,14 +461,14 @@
                     <!-- Ads panel-->
                     <div class="col l3 s12" id="right-panel">
                      <div class="row">
-                      <div class="col s12" style="height:250px; background: #ccc">
-                        <img src="http://openx.yourstory.com/www/images/932b7102f705d320b08efdca2a9b7da1.png">
+                      <div class="col s12 ads-card">
+                        <img src="images/ad.png">
                       </div>
-                      <div class="col s12" style="height:250px; background: #ccc">
-                        <img src="http://openx.yourstory.com/www/images/932b7102f705d320b08efdca2a9b7da1.png">
+                      <div class="col s12 ads-card">
+                        <img src="images/ad.png">
                       </div>
-                      <div class="col s12" style="height:250px; background: #ccc">
-                        <img src="http://openx.yourstory.com/www/images/932b7102f705d320b08efdca2a9b7da1.png">
+                      <div class="col s12 ads-card">
+                        <img src="images/ad.png">
                       </div>
 
                     </div>
