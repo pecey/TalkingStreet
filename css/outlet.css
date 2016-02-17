@@ -2,6 +2,9 @@
 body {
   font-weight: 500; }
 
+.row {
+  margin-bottom: 0px; }
+
 .btn {
   font-family: 'Catamaran'; }
 
@@ -34,7 +37,8 @@ body {
     font-family: 'Catamaran';
     font-weight: 700;
     border-bottom: 1px solid #F44336;
-    padding: 10px; }
+    padding: 5px;
+    margin-bottom: 10px; }
 
 .outlet-featured-image {
   width: 100%;
@@ -64,7 +68,11 @@ body {
 
 .outlet-share {
   position: absolute;
-  right: 50px; }
+  right: 30px; }
+
+.outlet-rating-number {
+  position: absolute;
+  right: 75px; }
 
 .outlet-featured-image-overlay {
   position: absolute;
