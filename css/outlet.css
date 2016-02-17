@@ -1,4 +1,7 @@
 /*** Global ***/
+body {
+  font-weight: 500; }
+
 .btn {
   font-family: 'Catamaran'; }
 
@@ -99,7 +102,8 @@ address {
     height: 200px;
     padding: 10px 20px;
     max-width: 80%; } }
-.left-panel-title {
+/* Similar Posts */
+.similar-post-title {
   background: #F44336;
   color: white;
   padding: 5px;
@@ -110,20 +114,39 @@ address {
   width: 300px;
   margin: 0 auto 10px; }
 
-/*Recent posts*/
-.recent-post-wrapper {
+.similar-post-holder {
   margin-bottom: 10px; }
-  .recent-post-wrapper .recent-post-image {
+  .similar-post-holder .similar-thumbnail {
     text-align: center; }
-    .recent-post-wrapper .recent-post-image img.thumbnail {
+    .similar-post-holder .similar-thumbnail img.thumbnail {
       width: 250px; }
 
-.recent-post-title {
+.similar-title {
   text-align: center;
   padding: 10px 0px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16) inset, 0 2px 10px 0 rgba(0, 0, 0, 0.12) inset;
   background: #eee;
   width: 250px;
   margin: 10px auto; }
+
+/* Review section */
+#respond {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16) inset, 0 2px 10px 0 rgba(0, 0, 0, 0.12) inset;
+  background: #eee;
+  padding: 10px; }
+
+.respond-heading {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-family: "Catamaran";
+  font-weight: 700;
+  text-align: center; }
+
+.comment-textarea {
+  background: white;
+  height: 150px; }
+  .comment-textarea textarea {
+    border: 1px solid #eee;
+    height: 100%; }
 
 /*# sourceMappingURL=outlet.css.map */
