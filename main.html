@@ -13,20 +13,23 @@
 </head>
 <body>
   <!-- Navbar starts-->
+  <header id="mk-header">
   <nav>
     <!-- Navbar desktop view -->
       <div class="nav-wrapper hide-on-med-and-down">
        <ul id="nav-mobile" class="right">
          <li><a href="#login-signup-modal" class="modal-trigger"><i class="material-icons left">account_circle</i>Hello, Foodie</a></li>
        </ul>
-       <div id="brand-logo"><img src=
-        "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png" /></div>
+       <div id="brand-logo" class="header-logo"><a href="http://talkingstreet.in" title="Talking Street">
+        <img src="http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png" class="mk-sticky-logo" alt="Talking Street"/></a>
+       </div>
         <!-- Navbar search form desktop view -->
         <form>
-         <div class="valign-wrapper" style="height: 100%;">
+         <div class="valign-wrapper" style="height: 100%; width: 100%; position: absolute;">
           <div class="input-field valign">
-            <input type="text" class="left custom-search" placeholder="Search" />
+           <input type="text" id="desktop-nav-search" placeholder="What or where do you want to eat next?" style="color:black; font-size: 15px";>
           </div>
+          <div class="lunr-search-results" id="search-result-area"></div>
         </div>
       </form>
 
@@ -67,6 +70,7 @@
         <div class="col l3 m3 s3 center"><a class="modal-trigger" href="#outlet-type-modal"><i class="material-icons">local_cafe</i><span id="outlet-type-modal-trigger">Outlet Type</span></a></div>
       </div>
     </div>
+    </header>
    <!-- Bottom popups -->
    <!-- City Selections -->
     <div id="city-modal" class="modal bottom-sheet">
@@ -238,7 +242,12 @@
                     Experience
                   </div><img src="images/traveller.jpg" /><a href="blog.html"><span class="card-title">Chasing Hunger: Hunger Chase Foodtruck in Sahakar Nagar</span></a>
                 </div>
-                <div class="card-content">Food Trucks are a recent addition to Bangalore’s food scene. Though they have not yet taken the city by storm, they are slowly and steadily making inroads. Almost every other month a new food truck joins the list. They seem to be making the right kind of noises and it’s a matter of time before they become part of the city’s street food culture.  The unique selling point of these trucks has to be the price at which they offer good quality food.</div>
+                <div class="card-content">
+                  <p><em style="color: #F44336">By Anandi Bandopadhyay</em></p>
+                  <hr>
+                  <p><i class="material-icons">place</i>Bangalore</p>
+                  <p><i class="material-icons">local_dining</i>Chaat</p>
+                </div>
               </div>
             </div>
 
@@ -249,7 +258,7 @@
                     Experience
                   </div><img src="images/traveller.jpg" /><a href="blog.html"><span class="card-title">Chasing Hunger: Hunger Chase Foodtruck in Sahakar Nagar</span></a>
                 </div>
-                <div class="card-content">Food Trucks are a recent addition to Bangalore’s food scene. Though they have not yet taken the city by storm, they are slowly and steadily making inroads. Almost every other month a new food truck joins the list. They seem to be making the right kind of noises and it’s a matter of time before they become part of the city’s street food culture.  The unique selling point of these trucks has to be the price at which they offer good quality food.</div>
+                <div class="card-content"></div>
 
               </div>
             </div>
@@ -263,7 +272,7 @@
                     Outlet
                   </div><img src=
                   "images/traveller.jpg" />
-                  <a href="outlet.html"><span class="card-title">Kota Kachori</span>
+                  <a href="outlet.html"><span class="card-title">Kota Kachori</span></a>
                   <div class="rating"><i class="material-icons">thumb_up</i></div>
                 </div>
 
@@ -277,8 +286,8 @@
                    </div>
 
                    <div class="col l6 s4 card-icons">
-                     <i class="material-icons">place</i>
-                     <i class="material-icons">error</i>
+                     <a target="_blank" href="http://maps.google.com/?q=12.974802219309,77.606051936746"><i class="material-icons">place</i></a>
+                     <i class="material-icons" id="info-circle">error</i>
                      <i class="material-icons">share</i>
                    </div>
                  </div>
@@ -300,10 +309,10 @@
                       </div>
 
                       <div class="info">
-                        <p>Phone Number</p>
+                        <p><i class="material-icons">phone</i><span>1234567890</span></p>
 
-                        <p>Timing</p>
-
+                        <p><i class="material-icons">access_time</i><span>10:00 am to 4:00 pm</span></p>
+                        <hr>
                         <p>Seating</p>
                       </div>
                     </div>
@@ -330,8 +339,8 @@
                        </div>
 
                        <div class="col l6 s4 card-icons">
-                         <i class="material-icons">place</i>
-                         <i class="material-icons">error</i>
+                         <a target="_blank" href="http://maps.google.com/?q=12.974802219309,77.606051936746"><i class="material-icons">place</i></a>
+                         <i class="material-icons" id="info-circle">error</i>
                          <i class="material-icons">share</i>
                        </div>
                      </div>
@@ -354,10 +363,10 @@
                           <!-- Best for ends -->
                           <!-- Extra information -->
                           <div class="info">
-                            <p>Phone Number</p>
+                            <p><i class="material-icons">phone</i><span>1234567890</span></p>
 
-                            <p>Timing</p>
-
+                            <p><i class="material-icons">access_time</i><span>10:00 am to 4:00 pm</span></p>
+                            <hr>
                             <p>Seating</p>
                           </div>
                           <!-- Extra information ends -->
@@ -370,8 +379,7 @@
                         <div class="card-image">
                           <div class="chip custom-chip outlet-chip">
                             Outlet
-                          </div><img src=
-                          "images/traveller.jpg" />
+                          </div><img src="images/traveller.jpg" />
                           <a href="outlet.html"><span class="card-title">Kota Kachori</span></a>
                           <div class="rating"><i class="material-icons">thumb_up</i></div>
                         </div>
@@ -383,8 +391,8 @@
                            </div>
 
                            <div class="col l6 s4 card-icons">
-                             <i class="material-icons">place</i>
-                             <i class="material-icons">error</i>
+                             <a target="_blank" href="http://maps.google.com/?q=12.974802219309,77.606051936746"><i class="material-icons">place</i></a>
+                             <i class="material-icons" id="info-circle">error</i>
                              <i class="material-icons">share</i>
                            </div>
                          </div>
@@ -406,10 +414,9 @@
                               </div>
 
                               <div class="info">
-                                <p>Phone Number</p>
-
-                                <p>Timing</p>
-
+                                <p><i class="material-icons">phone</i><span>1234567890</span></p>
+                                <p><i class="material-icons">access_time</i><span>10:00 am to 4:00 pm</span></p>
+                                <hr>
                                 <p>Seating</p>
                               </div>
                             </div>
@@ -417,53 +424,74 @@
                         </div>
                       </div>
                     </div>
+
+
                     <!-- Ads panel-->
                     <div class="col l3 s12" id="right-panel">
                      <div class="row">
-                      <div class="col s12" style="height:200px; background: #ccc"></div>
-                      <div class="col s12" style="height:200px; background: #ccc"></div>
-                      <div class="col s12" style="height:200px; background: #ccc"></div>
+                      <div class="col s12" style="height:250px; background: #ccc">
+                        <img src="http://openx.yourstory.com/www/images/932b7102f705d320b08efdca2a9b7da1.png">
+                      </div>
+                      <div class="col s12" style="height:250px; background: #ccc">
+                        <img src="http://openx.yourstory.com/www/images/932b7102f705d320b08efdca2a9b7da1.png">
+                      </div>
+                      <div class="col s12" style="height:250px; background: #ccc">
+                        <img src="http://openx.yourstory.com/www/images/932b7102f705d320b08efdca2a9b7da1.png">
+                      </div>
 
                     </div>
                   </div>
                   <!-- Ads Panel ends over here -->
                 </div>
               </div>
-              <footer class="page-footer hide-on-med-and-down">
+
+
+              <!-- Footer -->
+              <footer class="page-footer hide-on-med-and-down mk-footer">
                <div class="container">
-                <div class="row">
-                 <div class="col s4 center-align" id="footer-left-pane">
-                  <h5>Talking Street</h5>
-                  <ul>
-                   <li><a href="about-us.html">about us</a></li>
-                   <li>suggest a joint</li>
-                   <li><a href="the-team.html">meet the team</a></li>
-                   <li><a href="street-food-club.html">street food club</a></li>
-                   <li><a href="hygiene.html">hygiene</a></li>
-                 </ul>
+                <div class="row" style="margin: 0px">
+                 <div class="col l4 offset-l2 s4" id="footer-left-pane">
+                  <div class="widgettitle">Talking Street</div>
+                    <div class="row">
+                      <div class="col l6 s12">
+                        <ul class="footer-menu">
+                         <li><a href="about-us.html">About us</a></li>
+                         <li><a href="the-team.html">Meet the team</a></li>
+                        </ul>
+                      </div>
+                      <div class="col l6 s12">
+                        <ul class="footer-menu">
+                         <li><a href="street-food-club.html">Street Food Club</a></li>
+                         <li><a href="hygiene.html">Hygiene</a></li>
+                       </ul>
+                       </div>
+                     </div>
                </div>
-               <div class="col s4 center-align" id="footer-center-pane">
-                <h5>Connect with us</h5>
+               <div class="col l4 s4 center-align" id="footer-center-pane">
+                 <div class="widgettitle">Connect with us</div>
+                  <div class="row footer-social-icons">
+                   <a href="https://www.facebook.com/streetsthattalk"><i class="fa fa-facebook"></i></a>
+                   <a href="https://twitter.com/maheima"><i class="fa fa-twitter"></i></a>
+                   <a href="https://plus.google.com/+TalkingStreetIn/posts"><i class="fa fa-google-plus"></i></a>
+                   <a href="https://www.instagram.com/talkingstreet/"><i class="fa fa-instagram"></i></a>
+                 </div>
                 <div class="row">
-                 <i class="fa fa-facebook"></i>
-                 <i class="fa fa-twitter"></i>
-                 <i class="fa fa-google-plus"></i>
-               </div>
+                    <div class="row">
+                     <div class="col s12">Drop a mail to <a href="mailto:hello@talkingstreet.in">hello@talkingstreet.in</a></div>
+                   </div>
+                </div>
              </div>
-             <div class="col s4 center-align" id="footer-right-pane">
-              <h5>Contact</h5>
-              <div class="row">
-               <div class="col s12">Drop a mail to <a href="mailto:hello@talkingstreet.in">hello@talkingstreet.in</a></div>
-             </div>
-           </div>
          </div>
        </div>
-       <div class="footer-copyright">
+       <div class="footer-copyright sub-footer">
         <div class="container center-align">
-         Copyright &copy; 2016. www.talkingstreet.in. All rights reserved.
+         <span class="mk-footer-copyright">Copyright &copy; 2016. www.talkingstreet.in. All rights reserved.</span>
        </div>
      </div>
    </footer>
+   <!-- Footer ends -->
+
+
    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js">
    </script><script type="text/javascript" src="js/underscore.js">
    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" type=
@@ -498,8 +526,28 @@
     });*/
 
   });
+/*Animate cards when clicked on info*/
+   $(function(){
+      var height = $(".card-content").outerHeight();
+      $(".card-content").css("min-height",height);
+    });
 
-   
+$("body").on('click', "#info-circle", function(){
+    console.log("Click");
+    console.log($(this).parent());
+    if($(this).text() == "error"){
+      $(this).text("clear");
+      $(this).parents(".card-content").find(".best-for").css("display","none");
+      $(this).parents(".card-content").find(".info").css("display","block");
+    }
+    else{
+      console.log("Click");
+    console.log($(this).parent());
+    $(this).text("error");
+    $(this).parents(".card-content").find(".info").css("display","none");
+    $(this).parents(".card-content").find(".best-for").css("display","block");
+    }
+  });
    </script>
 </body>
 </html>

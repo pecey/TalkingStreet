@@ -55,11 +55,32 @@ nav {
   width: 7px;
   height: 13px; }
 
+.collapsible-header {
+  min-height: 2.5rem;
+  line-height: 2.5rem; }
+  .collapsible-header i {
+    line-height: 2.5rem;
+    font-size: 1.3rem;
+    margin-right: 0.2rem; }
+
+.collapsible-body p a.modal-trigger {
+  margin-bottom: 2px;
+  margin-top: 2px;
+  border-bottom: 1px dashed #F44336;
+  display: inline-block; }
+  .collapsible-body p a.modal-trigger:hover {
+    border-bottom: 1px solid #f44336; }
+.collapsible-body p:last-child {
+  margin-bottom: 10px; }
+
 [type="checkbox"] + label:before {
   top: 4px;
-  left: 3px;
-  width: 15px;
-  height: 15px; }
+  left: 5px;
+  width: 12px;
+  height: 12px; }
+
+[type="checkbox"] + label {
+  height: 12px; }
 
 a {
   color: black;
@@ -71,7 +92,7 @@ a {
 
 body {
   font-family: "Open Sans";
-  font-weight: 300; }
+  font-weight: 500; }
 
 .input-field {
   width: 50%;
@@ -90,7 +111,7 @@ nav {
 #brand-logo img {
   position: absolute;
   top: 7px;
-  left: 20px;
+  left: 33px;
   width: 60px; }
 
 .blog-image {
@@ -99,9 +120,8 @@ nav {
 .custom-chip {
   position: absolute;
   z-index: 10;
-  top: 10px;
-  left: 10px;
-  box-shadow: 1px 1px 1px #2F2D2D;
+  top: 0px;
+  left: 0px;
   border-radius: 0px;
   padding: 0px 5px; }
 
@@ -120,7 +140,8 @@ hr {
 
 .location-name {
   display: inline-block;
-  font-size: 0.9em; }
+  padding-left: 0px !important;
+  font-size: 0.85em; }
 
 .info {
   display: none; }
@@ -179,41 +200,46 @@ hr {
   font-size: 1em; }
 
 .card .card-image .card-title {
-  padding: 10px; }
+  padding: 10px;
+  font-weight: 500; }
 
 .card-content {
   padding: 10px;
   text-overflow: ellipsis;
   text-align: justify;
-  margin-bottom: 20px; }
+  margin-bottom: 0px; }
 
 .blog-card .card-content {
   padding: 0px 10px 0px !important;
-  line-height: 1.8em;
-  max-height: 5.4em !important;
+  line-height: 1.5em;
+  max-height: 6em !important;
   overflow: hidden;
-  margin-right: -1em;
-  padding-right: 1em;
-  position: relative; }
+  margin: 1em 0px;
+  font-size: 0.85em; }
+  .blog-card .card-content .material-icons {
+    font-size: 0.9em;
+    margin-right: 5px; }
 
-.blog-card .card-content:before {
-  content: '...';
-  position: absolute;
-  right: 0;
-  bottom: 0; }
+@media only screen and (min-width: 601px) {
+  nav {
+    height: 40px;
+    line-height: 40px; }
+    nav .nav-wrapper i {
+      height: 40px;
+      line-height: 40px; }
 
-.blog-card .card-content:after {
-  content: '';
-  position: absolute;
-  right: 0px;
-  width: 1em;
-  height: 1em;
-  margin-top: 0.2em;
-  background: white; }
-
+  ul#nav-mobile a {
+    font-size: 0.8em; } }
 @media only screen and (min-width: 993px) {
   .card-icons .material-icons {
     font-size: 1em; }
+
+  .info {
+    font-size: 0.8em; }
+    .info .material-icons {
+      font-size: 1em; }
+    .info p span {
+      margin: 5px; }
 
   .best-for {
     font-size: 0.8em; }
@@ -222,7 +248,9 @@ hr {
 
   .card-content {
     font-size: 1em;
-    padding: 10px !important; } }
+    padding: 10px !important; }
+    .card-content .row {
+      margin-bottom: 0px; } }
 @media only screen and (max-width: 992px) {
   body {
     font-size: 2em;
@@ -359,5 +387,39 @@ hr {
       color: black;
       font-size: 1.2em;
       padding: 20px; } }
+/*Search*/
+#custom-search {
+  font-size: 15px;
+  color: black; }
+
+/* Footer */
+.footer-copyright {
+  height: 30px;
+  line-height: 30px; }
+
+.mk-footer-copyright {
+  font-size: 0.8em;
+  font-weight: 500; }
+
+.page-footer {
+  font-size: .85em; }
+  .page-footer a {
+    color: white; }
+  .page-footer .row {
+    margin-bottom: 5px; }
+
+.footer-social-icons i {
+  margin-right: 10px; }
+.footer-social-icons:last-child {
+  margin-right: 0px; }
+
+.widgettitle {
+  font-size: 1.2em;
+  margin-bottom: 10px; }
+
+.footer-menu {
+  margin: 0px; }
+  .footer-menu li:first-child {
+    margin-bottom: 5px; }
 
 /*# sourceMappingURL=main.css.map */
