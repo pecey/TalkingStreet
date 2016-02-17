@@ -82,27 +82,27 @@
       </div>
     </div>
     </header>
-   <!-- Bottom popups -->
+    <!-- Blank div used to separate fixed header from bottom divs -->
+    <div class="header-separator" style="height: 70px; width: 100%"></div>
+   <!-- Bottom popups  for mobile view-->
    <!-- City Selections -->
     <div id="city-modal" class="modal bottom-sheet">
       <div class="modal-content">
-        <h1>Select a city</h1>
-        <ul class="collection">
-          <li class="collection-item"><span class="title">Bangalore</span><a href="#!" class="secondary-content"><i class="material-icons">done</i></a></li>
-          <li class="collection-item"><span class="title">Indore</span></li>
-          <li class="collection-item"><span class="title">Goa</span></li>
-          <li class="collection-item"><span class="title">Kolkata</span></li>
-        </ul>
+        <h4>Select a city</h4>
+         <p><input type="radio" name="city" id="indore-radio" value="Indore"><label for="indore-radio">Indore</label></p>
+         <p><input type="radio" name="city" id="kolkata-radio" value="kolkata"><label for="kolkata-radio">Kolkata</label></p>
+         <p><input type="radio" name="city" id="delhi-radio" value="delhi"><label for="delhi-radio">Delhi</label></p>
+         <p style="text-align: right;"><a class="modal-trigger" href="#city-desktop-modal">View More</a></p>
       </div>
     </div>
     <!-- Location selection -->
     <div id="location-modal" class="modal bottom-sheet">
       <div class="modal-content">
         <h4>Select a location</h4>
-       <p><input type="radio" class="with-gap" name="location" id="koramangala-radio" value="Koramangala"><label for="koramangala-radio">Koramangala</label></p>
-                <p><input type="radio" class="with-gap" name="location" id="indiranagar-radio" value="Indiranagar"><label for="indiranagar-radio">Indiranagar</label></p>
-                <p><input type="radio" class="with-gap" name="location" id="domlur-radio" value="Domlur"><label for="domlur-radio">Domlur</label></p>
-                <p><input type="radio" class="with-gap" name="location" id="shivaji-nagar-radio" value="Shivaji Nagar"><label for="shivaji-nagar-radio">Shivaji Nagar</label></p>
+       <p><input type="checkbox" class="with-gap" name="location" id="koramangala-checkbox" value="Koramangala"><label for="koramangala-checkbox">Koramangala</label></p>
+                <p><input type="checkbox" class="with-gap" name="location" id="indiranagar-checkbox" value="Indiranagar"><label for="indiranagar-checkbox">Indiranagar</label></p>
+                <p><input type="checkbox" class="with-gap" name="location" id="domlur-checkbox" value="Domlur"><label for="domlur-checkbox">Domlur</label></p>
+                <p><input type="checkbox" class="with-gap" name="location" id="shivaji-nagar-checkbox" value="Shivaji Nagar"><label for="shivaji-nagar-checkbox">Shivaji Nagar</label></p>
                 <p style="text-align: right;"><a class="modal-trigger" href="#location-desktop-modal">View More</a></p>
       </div>
     </div>
@@ -110,10 +110,10 @@
     <div id="cuisine-modal" class="modal bottom-sheet">
       <div class="modal-content">
         <h4>Select a cuisine</h4>
-         <p><input type="radio" class="with-gap" name="category" id="chaat-radio" value="Chaat"><label for="chaat-radio">Chaat</label></p>
-                <p><input type="radio" class="with-gap" name="category" id="sweets-radio" value="Sweets"><label for="sweets-radio">Sweets</label></p>
-                <p><input type="radio" class="with-gap" name="category" id="north-indian-radio" value="North Indian"><label for="north-indian-radio">North Indian</label></p>
-                <p><input type="radio" class="with-gap" name="category" id="south-indian-radio" value="South Indian"><label for="south-indian-radio">South Indian</label></p>
+         <p><input type="checkbox" class="with-gap" name="category" id="chaat-checkbox" value="Chaat"><label for="chaat-checkbox">Chaat</label></p>
+                <p><input type="checkbox" class="with-gap" name="category" id="sweets-checkbox" value="Sweets"><label for="sweets-checkbox">Sweets</label></p>
+                <p><input type="checkbox" class="with-gap" name="category" id="north-indian-checkbox" value="North Indian"><label for="north-indian-checkbox">North Indian</label></p>
+                <p><input type="checkbox" class="with-gap" name="category" id="south-indian-checkbox" value="South Indian"><label for="south-indian-checkbox">South Indian</label></p>
                 <p style="text-align: right;"><a class="modal-trigger" href="#category-desktop-modal">View More</a></p>
       </div>
     </div>
@@ -152,6 +152,7 @@
 
    <div class="custom-container">
       <div class="row" >
+        <!-- Accordion -->
          <!-- Desktop Filters-->
         <div class="col l2 hide-on-med-and-down" id="left-panel">
           <ul class="collapsible" data-collapsible="accordion">
@@ -161,9 +162,10 @@
               </div>
 
               <div class="collapsible-body">
-                <p><input type="checkbox" class="with-gap" name="location" id="koramangala-checkbox-desktop" value="Koramangala"><label for="koramangala-checkbox-desktop">Koramangala</label></p>
-                <p><input type="checkbox" class="with-gap" name="location" id="indiranagar-checkbox-desktop" value="Indiranagar"><label for="indiranagar-checkbox-desktop">Indiranagar</label></p>
-                <p><input type="checkbox" class="with-gap" name="location" id="domlur-checkbox-desktop" value="Domlur"><label for="domlur-checkbox-desktop">Domlur</label></p>
+                <p><input type="radio" name="city" id="indore-radio-desktop" value="Indore"><label for="indore-radio-desktop">Indore</label></p>
+                <p><input type="radio" name="city" id="kolkata-radio-desktop" value="kolkata"><label for="kolkata-radio-desktop">Kolkata</label></p>
+                <p><input type="radio" name="city" id="delhi-radio-desktop" value="delhi"><label for="delhi-radio-desktop">Delhi</label></p>
+                <p style="text-align: right;"><a class="modal-trigger" href="#city-desktop-modal">View More</a></p>
               </div>
             </li>
 
@@ -211,7 +213,25 @@
           </ul>
         </div>
 
+        <!-- Modal for desktop view -->
         <!-- Modals for filters -->
+
+        <div id="city-desktop-modal" class="modal">
+          <div class="modal-content row">
+            <div class="modal-desktop-title">Showing all cities</div>
+            <div class="modal-desktop-content">
+              <div class="col l6 s12">
+                <p><input type="radio" name="city" id="indore-radio-modal" value="Indore"><label for="indore-radio-modal">Indore</label></p>
+                <p><input type="radio" name="city" id="kolkata-radio-modal" value="kolkata"><label for="kolkata-radio-modal">Kolkata</label></p>
+                <p><input type="radio" name="city" id="delhi-radio-modal" value="delhi"><label for="delhi-radio-desktop">Delhi</label></p>
+              </div>
+              <div class="col l6 s12">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <div id="location-desktop-modal" class="modal">
           <div class="modal-content row">
             <div class="modal-desktop-title">Showing locations in Bangalore</div>
@@ -248,9 +268,17 @@
           </div>
         </div>
 
+        <!-- Subscription Plugin to be used -->
+
          <div id="subscribe-me-modal" class="modal">
-          <div class="modal-content">
-            <h4>Subscribe Me</h4>
+          <div class="modal-content row">
+           <div class="modal-desktop-title">Subscribe Me</div>
+           <div class="modal-desktop-content">
+              <form style="width: 60%; margin: 0 auto; padding-top: 20px">
+                <input type="text" placeholder="Email Address">
+                <button class="btn red" style="margin: 0 auto; display: block;">Subscribe Me</button>
+              </form>
+           </div>
           </div>
         </div>
   <!-- Content till here is common to inner pages -->
@@ -305,7 +333,7 @@
                   </div><img src=
                   "images/traveller.jpg" />
                   <a href="outlet.html"><span class="card-title">Kota Kachori</span></a>
-                  <div class="rating"><i class="material-icons">share</i></div>
+                  <div class="sharing"><i class="material-icons">share</i></div>
                 </div>
 
                 <div class="card-content">
@@ -358,7 +386,7 @@
                       </div><img src=
                       "images/traveller.jpg" />
                       <a href="outlet.html"><span class="card-title">Kota Kachori</span></a>
-                      <div class="rating"><i class="material-icons">share</i></div>
+                      <div class="sharing"><i class="material-icons">share</i></div>
                     </div>
 
                     <div class="card-content">
@@ -411,7 +439,7 @@
                             Outlet
                           </div><img src="images/traveller.jpg" />
                           <a href="outlet.html"><span class="card-title">Kota Kachori</span></a>
-                          <div class="rating"><i class="material-icons">share</i></div>
+                          <div class="sharing"><i class="material-icons">share</i></div>
                         </div>
 
                         <div class="card-content">
@@ -457,7 +485,7 @@
                        <div class="row" style="position: relative; width:100%; height:20px">
                         <div style="text-align: right;position: absolute; right: 10px;
     padding: 5px;
-    background: #7FFFD4;>more<i style="display:none" class="material-icons" style="font-size:2em">more_horiz</i></div>
+    background: #7FFFD4;">more<i style="display:none" class="material-icons" style="font-size:2em">more_horiz</i></div>
                       </div>
 
                       <!-- outlet view more ends-->
@@ -587,6 +615,11 @@ $("body").on('click', "#info-circle", function(){
     $(this).parents(".card-content").find(".best-for").css("display","block");
     }
   });
+  $(function(){
+    if($("#mobile-nav").height() != 0){
+      $(".header-separator").css("height","250px");
+    }
+  })
    </script>
 </body>
 </html>

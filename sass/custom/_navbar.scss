@@ -1,11 +1,136 @@
 @import 'partials/constants';
 
+
+/* Brand logo */
+#brand-logo {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+#brand-logo img {
+  position: absolute;
+      top: 7px;
+    left: 33px;
+    width: 60px;}
+
+
 nav{
 	background-color:#212121;
+	margin-bottom: 3em;
 }
+
+.navbar-login{
+  position: absolute;
+  right: 10px;
+  top: 0px;
+}
+
+#desktop-nav-search{
+  position: absolute;
+}
+
+#mk-header{
+	position: fixed;
+    height: 40px;
+    width: 100%;
+    z-index: 1000;
+}
+
+@media only screen and (min-width: 601px){
+  nav{
+      height: 40px;
+    line-height: 40px;
+    .nav-wrapper i{
+    height: 40px;
+    line-height: 40px
+    }
+  }
+ ul#nav-mobile a {
+    font-size: 0.8em;
+    }
+}
+
 @media #{$medium-and-down}{
 	nav{
 		height:150px;
 		margin-bottom:0em;
 	}
+
+ .side-nav{
+    a{
+    font-size: 1.2em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 15px 0px;
+    }
+  }
+
+    #mobile-nav{
+      height: 100%;
+      display: table;
+      width:100%;
+  }
+  nav a.button-collapse{
+    display: table;
+    height: 100%;
+  }
+  #mobile-nav a i{
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 2em;
+    padding-left: 1em;
+  }
+  #brand-logo-mobile-wrapper{
+    height: 200px;
+    display: table;
+    width:100%;
+  }
+  #brand-logo-mobile{
+    text-align:center;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .bottom-sheet{
+  font-size: 1.2em;
+    .collection{
+        .collection-item{
+          margin: 20px;
+          padding:20px;
+          .secondary-content{
+                position: absolute;
+              top: 0.75em;
+              right: 16px;
+            }
+        }
+      }
+  }
+  .mobile-only-filters .row .col{
+    position: relative;
+    a i{
+        position: absolute;
+    top: 0px;
+    left: 0px;
+    }
+  }
+  #mobile-nav-search{
+    width: 80%;
+    background: white;
+    height: 60%;
+    margin: 0 auto;
+  }
+  #mobile-nav-search-wrapper{
+    display:table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 80%;
+    input{
+    color: black;
+    font-size: 1.2em;
+      padding: 20px;
+    }
+  }
 }
