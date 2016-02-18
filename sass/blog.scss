@@ -5,13 +5,17 @@
 body{
 	font-family:'Catamaran';
 }
+.custom-container{
+	font-size:1.5em;
+}
 .blog-title{
 	text-transform:uppercase;
-	font-size:1.5em;
+	font-size:1.2em;
 	font-weight:700;
 } 
 .blog-meta {
     font-size: 0.7em;
+    margin-top: 5px;
 }
 .blog-at-a-glance{
 	margin-top: 1em;
@@ -33,9 +37,11 @@ body{
 	width:100%; 
 	text-align: justify;
 	font-family: "Open Sans";
-	font-size: 0.7em;
+	font-size: 0.65em;
 }
-
+.chip{
+	position:initial;
+}
 @media only screen  and (max-width: 992px){
 	.blog-title{
 	    	font-size: 2em;
