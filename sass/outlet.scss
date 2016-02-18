@@ -41,8 +41,10 @@ body{
 		font-family:'Catamaran';
 		font-weight: 700;
 		border-bottom: 1px solid #F44336;
-		padding: 5px;
-		margin-bottom: 10px;
+		padding: 7px;
+	    margin-bottom: 10px;
+	    padding-bottom: 0px;
+	    padding-left: 0px;	
 	}
 }
 
@@ -79,6 +81,34 @@ body{
 .outlet-rating-number{
 	position: absolute;
 	right: 75px;
+	width: 38px; height: 38px; text-align: center; font-weight: 700;
+}
+.outlet-share{
+	width: 38px; height: 38px; text-align: center; font-weight: 700;
+}
+@media #{$medium-and-down}{
+	.outlet-meta{
+		font-size: 0.4em !important;
+	}
+	.outlet-special-information, .outlet-photos{
+		font-size: 0.4em;
+	}
+	.outlet-rating-number,.outlet-share{
+		width: 60px;
+    	height: 60px;
+    	line-height: 60px;
+    	top: 135px;
+	}
+	.outlet-rating-number{
+		right: 100px;
+	}
+	.outlet-share{
+		i {
+			font-size: 2rem;
+    		line-height: 60px;
+		}
+		right: 30px;
+	}
 }
 .outlet-featured-image-overlay{
 	position: absolute;
@@ -166,6 +196,12 @@ address{
     margin: 10px auto;
 }
 
+@media #{$medium-and-down}{
+	.similar-post-title{
+		width: 85%;
+	}
+}
+
 
 /* Review section */
 #respond{
@@ -174,11 +210,11 @@ address{
 	padding: 10px;
 }
 .respond-heading{
-	font-size: 0.75em;
+	font-size: 0.65em;
     text-transform: uppercase;
     font-family: "Catamaran";
     font-weight: 700;
-    text-align: center;
+    border-bottom: 1px solid #f44336;
 }
 
 .comment-textarea{
@@ -188,4 +224,8 @@ address{
 		border: 1px solid #eee;
 		height: 100%;
 	}
+}
+.comment-reply-title{
+	margin-top:10px;
+	margin-bottom: 10px;
 }

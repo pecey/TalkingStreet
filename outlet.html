@@ -89,8 +89,8 @@
     			<div class="outlet-image-buttons">
   	  			<span class="outlet-review"><button class="btn red">Review</button></span>
   	  			<span class="outlet-rating"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></span>
-            <a class="btn-floating outlet-share red" style="width: 38px; height: 38px; text-align: center; font-weight: 700"><i class="material-icons">place</i></a>
-  	  			 <a class="btn-floating outlet-rating-number red" style="width: 38px; height: 38px; text-align: center; font-weight: 700">4.6</a>
+            <a class="btn-floating outlet-share red"><i class="material-icons">place</i></a>
+  	  			 <a class="btn-floating outlet-rating-number red">4.6</a>
     			</div>
     			</div>
     			</div>
@@ -141,7 +141,7 @@
               <div class="outlet-extra-information">
                 <div class="outlet-main-info-card-title">Other information</div>
                 <p>Seating : Yes</p>
-                <p>Phone : 123456789</p>
+                <p class="phon-num">Phone : <a href="tel:123456789">123456789</a></p>
               </div>
             </div>
   		  </div>
@@ -177,7 +177,13 @@
 
           <!-- YASR Ratings -->
           
-
+          <div style="margin-bottom: 5px;">
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+          </div>
 
           <div class="comment-textarea">
             <textarea class="textarea" name="comment" id="comment" onkeyup="countChar(this)" rows="8" minlength="15" maxlength="15360"> 
