@@ -1,0 +1,54 @@
+#profile-user-image{
+	text-align: center;
+	img{
+		border-radius: 50%;
+	}
+	div input[type="submit"]	{
+		background: white;
+		border:none;
+		border-bottom: 1px dashed #f44336;	
+		&:hover{
+			border-bottom: 1px solid #f44336;
+		}
+	}
+}
+.profile-user-image-overlay{
+		position: absolute;
+		top: 0px;
+		left: 18px;
+		height: 100%;
+		width: 100%;
+		border-radius: 50%;
+		background: rgba(0,0,0,0.6);
+		display:none;
+		cursor:pointer;
+		input[type="file"]{
+			width:100%;
+			height:100%;
+			opacity:0;
+			border-radius:50%;
+			z-index:10;
+		}
+	}
+.profile-user-image-overlay-text{
+	text-align:center;
+	vertical-align:middle;
+	display:table-cell;
+	color: white;
+	height:100%;
+	width:100%;
+	font-weight: 500;
+}
+#profile-user-name{
+	font-family: 'Catamaran';
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.5em;
+    margin-top: 10px;
+}
+.profile-user-details-title{
+	color:#f44336;
+	text-transform: uppercase;
+	font-family:"Catamaran";
+	font-size:1.5em;
+}

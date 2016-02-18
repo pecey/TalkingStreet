@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Talking Street</title>
@@ -6,8 +7,11 @@
   'stylesheet' type='text/css' />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
   type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Catamaran:400,300,600,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
 </head>
 <body>
   <!-- Navbar starts-->
@@ -68,14 +72,35 @@
     -->
 
    <div class="custom-container">
-      <div class="row" >
+      <div class="row">
          <!-- Desktop Filters wont be there on profile pags-->
 
   <!-- Content till here is common to inner pages -->
 
     <div class="col l10 s12" id="center-panel">
-        <div class="row">
+    <div class="row" style="display: table">
+      <div class="col l4 s12" id="profile-user-image">
+        <div id="profile-user-image-wrapper" style="position: relative;">
+          <img id="user-image" src="images/ad.png">
+          <div class="profile-user-image-overlay">
+           <input type="file" name="basic-user-avatar" id="basic-local-avatar" accept="image/*" onchange="handleFiles(this.files)">
+            <div class="profile-user-image-overlay-text">Change your avatar</div>
+          </div>
         </div>
+        <div class="l12 s12"><input type="submit" id="update-avatar-button" name="manage_avatar_submit" value="Update avatar" style="display: none"></div>
+        <div class="l12 s12" id="profile-user-name">Rupam Gogoi</div>
+      </div>
+      <div class="col l8 s12" id="profile-user-details" style="display: table-cell; vertical-align: middle;">
+        <div class="profile-user-details-title">Change your password</div>
+        <hr>
+        <form>
+          <input type="password" placeholder="Current Password">
+          <input type="password" placeholder="New Password">
+          <input type="password" placeholder="Confirm Password">
+          <button class="btn red">Change</button>
+        </form>
+      </div>
+      </div>
     </div>
     <div class="col l2 s12" id="right-panel">
        <div class="row">
@@ -84,3 +109,46 @@
         <div class="col s12" style="height:200px; background: #ccc"></div>
       </div>
     </div>
+    <!-- Ends right panel-->
+</div>
+</div>
+<!-- Custom container has ended-->
+ <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+ <script type="text/javascript">
+   $(function(){
+      var img = $("#profile-user-image img");
+      var img_height = img.height();
+      var img_width = img.width();
+      console.log(img_height);
+      if(img_height > img_width){
+        img.css("height", img_width).css("width", img_width);
+        $(".profile-user-image-overlay").css("height", img_width).css("width", img_width);
+      }
+      else{
+        img.css("width", img_height).css("height", img_height);
+        $(".profile-user-image-overlay").css("width", img_height).css("height", img_height);
+      }
+   });
+
+    $("#profile-user-image").hover(function(){
+     $(".profile-user-image-overlay").css("display","table");
+      }, function(){
+        $(".profile-user-image-overlay").css("display","none");
+    });
+
+    $(".profile-user-image-overlay-text").click(function(){
+      $("#basic-local-avatar").trigger("click");
+    })
+    handleFiles = function(files){
+      if(!files.length){
+        return;
+      }
+      else{
+        var src = window.URL.createObjectURL(files[0]);
+        $("#user-image").attr("src", src);
+        $("#update-avatar-button").css("display","inline");
+      }
+    }
+ </script>
+</body>
+</html>
