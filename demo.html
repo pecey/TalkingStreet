@@ -36,14 +36,14 @@
 		});
 
 		$("#city").on("change", function(){
-
 			searchByCity();
 		});
 		$("body").on("change", function(){
+			console.log("Call");
 			var city = $("#city").val();
 			var location, cuisine;
-			$("input[name='location']").change(function(e){
-			
+			$("input[name='location']").unbind().change(function(e){
+				e.preventDefault();
 			location = $("input[name='location']:checked").data("value");
 			result = search(city, location);
 			console.log("Result : ", result);
@@ -61,12 +61,13 @@
 		});	
 	});
 	$("body").on("change", function(){
-		$("input[name='cuisine']").change(function(){
+		$("input[name='cuisine']").unbind().change(function(){
+			console.log("Cuisine Change");
 			var city = $("#city").val();
 				var location = $("input[name='location']:checked").data("value");
 				var cuisine = $("input[name='cuisine']:checked").data("value");
 				if(location == undefined)
-					result = search(city, "", location);
+					result = search(city, "", cuisine);
 				else
 					result = search(city,location,cuisine);
 				if(outlets.length){
