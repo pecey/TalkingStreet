@@ -62,6 +62,7 @@
 	});
 	$("body").on("change", function(){
 		$("input[name='cuisine']").change(function(){
+			var city = $("#city").val();
 				var location = $("input[name='location']:checked").data("value");
 				var cuisine = $("input[name='cuisine']:checked").data("value");
 				if(location == undefined)
