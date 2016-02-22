@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TS Filters Testing</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body class="container">
+<div class="row">
+<select id="city">
+	<option>Bangalore</option>
+	<option>Goa</option>
+</select>
+</div>
+<div id="location" class="col-md-3"></div>
+<div id="cuisines" class="col-md-3"></div>
+<div id="outlets" class="col-md-3"></div>
+<div id="blogs" class="col-md-3"></div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/underscore.js"></script>
+<script type="text/javascript" src="js/filters.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			$.ajax({
+				url:'data/location.listing.json',
+				success:function(response){
+					init(response);
+					$.ajax({
+							url:'data/final_results.json',
+							success: function(cuisine){
+								fillMaps(cuisine);
+							}
+						});
+				}
+			});
+		});
+
+		$("#city").on("change", function(){
+			searchByCity();
+		});
+		$("body").on("change", function(){
+			var city = $("#city").val();
+			var location, cuisine;
+			$("input[name='location']").change(function(e){
+			
+			location = $("input[name='location']:checked").data("value");
+			result = search(city, location);
+			console.log("Result : ", result);
+			if(result["cuisine"].length){
+				arrangeData(result.cuisine, "cuisine","#cuisines");
+			}
+			if(result["outlet"].length){
+				outlets = fetchPostName(result.outlet);
+				arrangeData(outlets, "outlet","#outlets");
+			}
+			if(result["blog"].length){
+				blogs = fetchPostName(result.blog);	
+				arrangeData(blogs, "blog","#blogs");
+			}
+		});	
+	});
+	$("body").on("change", function(){
+		$("input[name='cuisine']").change(function(){
+				var location = $("input[name='location']:checked").data("value");
+				var cuisine = $("input[name='cuisine']:checked").data("value");
+				if(location == undefined)
+					result = search(city, "", location);
+				else
+					result = search(city,location,cuisine);
+				if(outlets.length){
+					outlets = fetchPostName(result.outlet);
+					arrangeData(outlets, "outlet","#outlets");
+				}
+				if(blogs.length){
+					blogs = fetchPostName(result.blog);	
+					arrangeData(blogs, "blog","#blogs");
+				}
+			});
+	});
+		searchByCity = function(){
+			city = $("#city").val();
+			results = search(city);
+			arrangeData(result.location, "location", "#location");
+			arrangeData(result.cuisine, "cuisine","#cuisines");
+		}
+
+		fetchPostName = function(result){
+			posts = [];
+			$.each(result, function(key, index){
+				posts.push(totalMap[index].post_title);
+			});
+			return posts;
+		}
+		arrangeData = function(result, name, id){
+			temp = "<ul>";
+			$.each(result, function(key, index){
+				temp += "<li><input type='radio' name='"+name+"' data-value='"+index+"'>"+index+"</li>";
+			});
+			temp += "</ul>";
+			$(id).html(temp);
+		}
+	</script>
+</body>
+</html>
