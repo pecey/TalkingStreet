@@ -28,6 +28,7 @@
 							url:'data/final_results.json',
 							success: function(cuisine){
 								fillMaps(cuisine);
+								searchByCity("Bangalore");
 							}
 						});
 				}
@@ -35,6 +36,7 @@
 		});
 
 		$("#city").on("change", function(){
+
 			searchByCity();
 		});
 		$("body").on("change", function(){
@@ -76,8 +78,9 @@
 				}
 			});
 	});
-		searchByCity = function(){
-			city = $("#city").val();
+		searchByCity = function(city){
+			if(city == undefined || !city)
+				city = $("#city").val();
 			results = search(city);
 			arrangeData(result.location, "location", "#location");
 			arrangeData(result.cuisine, "cuisine","#cuisines");
