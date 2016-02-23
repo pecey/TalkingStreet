@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Talking Street</title>
   <!-- Stylesheets-->
- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel=
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel=
   'stylesheet' type='text/css' />
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Catamaran:400,300,600,700' rel='stylesheet' type='text/css'>
@@ -15,20 +16,27 @@
 </head>
 <body>
   <!-- Navbar starts-->
+  <header id="mk-header">
   <nav>
     <!-- Navbar desktop view -->
       <div class="nav-wrapper hide-on-med-and-down">
-       <ul id="nav-mobile" class="right">
-         <li><a href="sass.html"><i class="material-icons left">account_circle</i>Hello, Foodie</a></li>
-       </ul>
-       <div id="brand-logo"><img src=
-        "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png" /></div>
+       
         <!-- Navbar search form desktop view -->
         <form>
-         <div class="valign-wrapper" style="height: 100%;">
+         <div class="valign-wrapper" style="height: 100%; width: 100%; position: absolute;">
+
+
+       <ul id="nav-mobile" class="right navbar-login">
+         <li><a href="http://talkingstreet.in/login"><i class="material-icons left">account_circle</i>Hello, Foodie</a></li>
+       </ul>
+       <div id="brand-logo" class="header-logo"><a href="http://talkingstreet.in" title="Talking Street">
+        <img src="http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png" class="mk-sticky-logo" alt="Talking Street"/></a>
+       </div>
+
           <div class="input-field valign">
-            <input type="text" class="left custom-search" placeholder="Search" />
+           <input type="text" id="desktop-nav-search" placeholder="What or where do you want to eat next?" style="color:black; font-size: 12px";>
           </div>
+          <div class="lunr-search-results" id="search-result-area"></div>
         </div>
       </form>
 
@@ -44,13 +52,11 @@
         "http://talkingstreet.in/wp-content/uploads/2015/02/talking-street.png"/></div></li>
         <li>
           <ul id="mobile-nav-menu">
-                <li><a href="#!">Login</a></li>
-                <li><a href="#!">Suggest A Joint</a></li>
-                <li><a href="#!">Subscribe</a></li>  
-                <li><a href="#!">About Us</a></li>
-                <li><a href="#!">The Team</a></li>
-                <li><a href="#!">Street Food Club</a></li>
-                <li><a href="#!">Hygiene</a></li>
+                <li><a href="http://talkingstreet.in/login">Login</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="the-team.html">The Team</a></li>
+                <li><a href="street-food-club.html">Street Food Club</a></li>
+                <li><a href="hygiene.html">Hygiene</a></li>
               </ul>
             </li>
       
@@ -59,6 +65,13 @@
         </div>
         <!-- Navbar mobile view ends here -->
       </nav>
+      <!-- Navbar ends here -->
+    </header>
+    <!-- Blank div used to separate fixed header from bottom divs -->
+    <div class="header-separator" style="height: 70px; width: 100%"></div>
+
+ 
+  
       <!-- Navbar ends here -->
     <!--Desktop Structure -->
     <!-- 
@@ -70,7 +83,7 @@
               [Collapsible]                [Outlets followed by blogs]
 
     -->
-
+<!-- Common header uptil here for blog and outlet -->
    <div class="custom-container">
       <div class="row" >
          <!-- Desktop Filters wont be there on inner pags-->
@@ -111,7 +124,7 @@
               <div class="card-plain-title">Did you visit?</div>
               <div class="card-plain-content">
                 <ul>
-                  <li><span><i class="material-icons">whatshot</i><span><span>Coffee House, for beverages.</span></li>
+                  <li><i class="material-icons">whatshot</i>Coffee House, for beverages.</li>
                   <li><i class="material-icons">whatshot</i>D'Ley Chinese Eating House, for Chinese dishes.</li>
                   <li><i class="material-icons">whatshot</i>Gunjan, for Chinese dishes.</li>
                   <li><i class="material-icons">whatshot</i>Porota Goli, for affordable Bengali food.</li>
@@ -150,22 +163,148 @@ Regulars might affectionately (and jokingly) declare that the only thing to comp
         </div>
     <div class="col l3 s12" id="right-panel">
       <!-- Subscribe Me Plugin -->
-      <div>
+      <div id="subscribe-me-custom-wrapper">
         <form>
           <input type="text" placeholder="Email address">
           <button class="btn red">Subscribe</button>
         </form>
       </div>
+
+
+       <section class="blog-similar-posts">
+          <div class="similar-post-title">Latest posts</div>
+          <!-- Demo Post-->
+          <div class="col l12 s6 similar-post-holder">
+              <div class="similar-thumbnail">
+                <img src="images/traveller.jpg" class="thumbnail">
+              </div>
+              <div class="similar-title">
+                Demo Recent Post
+              </div>
+          </div>
+          <!-- Demo Post ends -->
+          <!-- Demo Post-->
+          <div class="col l12 s6 similar-post-holder">
+              <div class="similar-thumbnail">
+                <img src="images/traveller.jpg" class="thumbnail">
+              </div>
+              <div class="similar-title">
+                Demo Recent Post
+              </div>
+          </div>
+          <!-- Demo Post ends -->
+          <!-- Demo Post-->
+          <div class="col l12 s6 similar-post-holder">
+              <div class="similar-thumbnail">
+                <img src="images/traveller.jpg" class="thumbnail">
+              </div>
+              <div class="similar-title">
+                Demo Recent Post
+              </div>
+          </div>
+          <!-- Demo Post ends -->
+           <!-- Demo Post-->
+          <div class="col l12 s6 similar-post-holder">
+              <div class="similar-thumbnail">
+                <img src="images/traveller.jpg" class="thumbnail">
+              </div>
+              <div class="similar-title">
+                Demo Recent Post
+              </div>
+          </div>
+          <!-- Demo Post ends -->
+      </section>
+
+
+
       <!-- Ads -->
        <div class="row">
-        <div class="col s12 ads-card">
+        <div class="col l12 s4 ads-card">
           <img src="images/ad.png">
         </div>
-        <div class="col s12 ads-card">
+        <div class="col l12 s4 ads-card">
           <img src="images/ad.png">
         </div>
-        <div class="col s12 ads-card">
+        <div class="col l12 s4 ads-card">
           <img src="images/ad.png">
         </div>
       </div>
+
+      <!-- Facebook widget placeholder-->
+      <div class="row hide-on-med-and-down">
+        <div style="height:350px; width: 222px; background: #ccc; margin: 0 auto"></div>
+      </div>
+
+
+      </div>
+      </div>
+
     </div>
+    <!-- Share Love -->
+    <div id="share-love"><a class="btn-floating btn-large red"><i class="large material-icons">person_add</i></a></div>
+
+<!-- Footer -->
+              <footer class="page-footer hide-on-med-and-down mk-footer">
+               <div class="container">
+                <div class="row" style="margin: 0px">
+                 <div class="col l4 offset-l2 s4" id="footer-left-pane">
+                  <div class="widgettitle">Talking Street</div>
+                    <div class="row">
+                      <div class="col l6 s12">
+                        <ul class="footer-menu">
+                         <li><a href="about-us.html">About us</a></li>
+                         <li><a href="the-team.html">Meet the team</a></li>
+                        </ul>
+                      </div>
+                      <div class="col l6 s12">
+                        <ul class="footer-menu">
+                         <li><a href="street-food-club.html">Street Food Club</a></li>
+                         <li><a href="hygiene.html">Hygiene</a></li>
+                       </ul>
+                       </div>
+                     </div>
+               </div>
+               <div class="col l4 s4 center-align" id="footer-center-pane">
+                 <div class="widgettitle">Connect with us</div>
+                  <div class="row footer-social-icons">
+                   <a href="https://www.facebook.com/streetsthattalk"><i class="fa fa-facebook"></i></a>
+                   <a href="https://twitter.com/maheima"><i class="fa fa-twitter"></i></a>
+                   <a href="https://plus.google.com/+TalkingStreetIn/posts"><i class="fa fa-google-plus"></i></a>
+                   <a href="https://www.instagram.com/talkingstreet/"><i class="fa fa-instagram"></i></a>
+                 </div>
+                <div class="row">
+                    <div class="row">
+                     <div class="col s12">Drop a mail to <a href="mailto:hello@talkingstreet.in">hello@talkingstreet.in</a></div>
+                   </div>
+                </div>
+             </div>
+         </div>
+       </div>
+       <div class="footer-copyright sub-footer">
+        <div class="container center-align">
+         <span class="mk-footer-copyright">Copyright &copy; 2016. www.talkingstreet.in. All rights reserved.</span>
+       </div>
+     </div>
+   </footer>
+   <!-- Footer ends -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" type=
+   "text/javascript">
+   </script>
+
+   <!-- Code required for header to function smoothly (will be same in outlet page also) -->
+    <script type="text/javascript">
+   /* For mobile view. Calculates the width of the sliding menu pane*/
+   var sideOutWidth = $(window).width()/2;
+   $(".button-collapse").sideNav({
+    menuWidth: sideOutWidth,
+    edge: 'right'
+  });
+    $(function(){
+    if($("#mobile-nav").height() != 0){
+      $(".header-separator").css("height","250px");
+    }
+  })
+  </script>
+ </body>
+ </html>
