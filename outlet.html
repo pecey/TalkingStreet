@@ -4,7 +4,6 @@
   <!-- Stylesheets-->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel=
   'stylesheet' type='text/css' />
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Catamaran:400,300,600,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
   type="text/css" />
@@ -89,7 +88,7 @@
     			<div class="outlet-image-buttons">
   	  			<span class="outlet-review"><button class="btn red">Review</button></span>
   	  			<span class="outlet-rating"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></span>
-            <a class="btn-floating outlet-share red"><i class="material-icons">place</i></a>
+            <a class="btn-floating outlet-map red"><i class="material-icons">place</i></a>
   	  			 <a class="btn-floating outlet-rating-number red">4.6</a>
     			</div>
     			</div>
@@ -136,11 +135,11 @@
   		 			<div class="col l12 s12 outlet-main-info-card card">
               <div class="outlet-description">
                 <div class="outlet-main-info-card-title">Description</div>
-                <p>Outlet description goes here. Blah blah blah blah.</p>
+                <p class="no-bottom-margin">Outlet description goes here. Blah blah blah blah.</p>
               </div>
               <div class="outlet-extra-information">
                 <div class="outlet-main-info-card-title">Other information</div>
-                <p>Seating : Yes</p>
+                <p class="no-bottom-margin">Seating : Yes</p>
                 <p class="phon-num">Phone : <a href="tel:123456789">123456789</a></p>
               </div>
             </div>
@@ -171,21 +170,25 @@
     <!-- Row ends-->
     <!-- Review section-->
         <div id="respond" class="comment-respond card">
+        
           <h3 id="reply-title" class="comment-reply-title">
-            <div name="t_reply" class="respond-heading">Review</div>
+            <div name="t_reply" class="respond-heading" style="float:left">Review</div>
+               <!-- YASR Ratings -->
+              <div id="yasr-ratings-custom-wrapper">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+              </div>
+              <div style="clear:both"></div>
           </h3>
 
-          <!-- YASR Ratings -->
+       
           
-          <div style="margin-bottom: 5px;">
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-          </div>
-
-          <div class="comment-textarea">
+        
+          
+            <div class="comment-textarea">
             <textarea class="textarea" name="comment" id="comment" onkeyup="countChar(this)" rows="8" minlength="15" maxlength="15360"> 
               
             </textarea>
@@ -236,15 +239,17 @@
       </section>
 
         <!-- Ads -->
-      <div class="row">
-        <div class="col l12 s4" style="text-align: center">
-          <img src="images/traveller.jpg" width="300px" height="250px">
+        <div class="row" style="text-align: center">
+          <div class="col s4 ads-card">
+             <img src="images/ad.png">
+          </div>
+          <div class="col s4 ads-card">
+            <img src="images/ad.png">
+          </div>
+          <div class="col s4 ads-card">
+            <img src="images/ad.png">
+          </div>
         </div>
-        
-        <div class="col l12 s4" style="text-align: center">
-          <img src="images/traveller.jpg" width="300px" height="250px">
-        </div>
-      </div>
       <!-- Ads ends -->
     </div>
 </div>

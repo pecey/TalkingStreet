@@ -43,7 +43,7 @@
 /* Advertisement Cards */
 .ads-card {
   height: 250px;
-  background: #ccc;
+  background: white;
   padding: 0px !important;
   margin-bottom: 10px; }
   .ads-card:first-child {
