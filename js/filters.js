@@ -384,7 +384,8 @@ $(document).ready(function(){
               url:'data/final_results.json',
               success: function(cuisine){
                 fillMaps(cuisine);
-                searchByCuisine("Bangalore",["Indira Nagar"],["Chaat"]);
+                //searchByCuisine("Bangalore",["Indira Nagar"],["Chaat"]);
+                populateFilters("Bangalore");
               }
             });
         }
