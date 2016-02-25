@@ -170,11 +170,13 @@
               </div>
 
               <div class="collapsible-body">
+                <div id="location-collapsible-body">
                 <p><input type="checkbox" class="with-gap" name="location" id="koramangala-checkbox-desktop" value="Koramangala"><label for="koramangala-checkbox-desktop">Koramangala</label></p>
                 <p><input type="checkbox" class="with-gap" name="location" id="indiranagar-checkbox-desktop" value="Indiranagar"><label for="indiranagar-checkbox-desktop">Indiranagar</label></p>
                 <p><input type="checkbox" class="with-gap" name="location" id="domlur-checkbox-desktop" value="Domlur"><label for="domlur-checkbox-desktop">Domlur</label></p>
                 <p><input type="checkbox" class="with-gap" name="location" id="shivaji-nagar-checkbox-desktop" value="Shivaji Nagar"><label for="shivaji-nagar-checkbox-desktop">Shivaji Nagar</label></p>
-                <p style="text-align: right;"><a class="modal-trigger" href="#location-desktop-modal">View More</a></p>
+                </div>
+                <p class="location-collapsible-body-view-more" style="text-align: right; display: none"><a class="modal-trigger" href="#location-desktop-modal">View More</a></p>
               </div>
             </li>
 
@@ -229,7 +231,7 @@
 
         <div id="location-desktop-modal" class="modal">
           <div class="modal-content row">
-            <div class="modal-desktop-title">Showing locations in Bangalore</div>
+            <div class="modal-desktop-title">Showing locations in Bangalore<span style="float:right; cursor: pointer"><i class="material-icons" onclick="applyLocationFilter()">search</i></span></div>
             <div class="modal-desktop-content" id="location-desktop-modal-content">
               <div class="col l6 s12" >
                 <p><input type="checkbox" name="location" id="koramangala-checkbox-modal" value="Koramangala"><label for="koramangala-checkbox-modal">Koramangala</label></p>
@@ -247,7 +249,7 @@
 
          <div id="category-desktop-modal" class="modal">
           <div class="modal-content row">
-            <div class="modal-desktop-title">Showing cuisines</div>
+            <div class="modal-desktop-title">Showing cuisines<span style="float:right; cursor: pointer"><i class="material-icons" onclick="applyCuisineFilter()">search</i></span></div>
             <div class="modal-desktop-content" id="cuisine-desktop-modal-content">
               <div class="col l6 s12">
                 <p><input type="checkbox" name="category" id="chaat-checkbox-modal" value="Chaat"><label for="chaat-checkbox-modal">Chaat</label></p>

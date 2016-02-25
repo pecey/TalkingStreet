@@ -52,6 +52,8 @@ var totalMap = {};
 var blogsToShow = {};
 var outletsToShow = {};
 
+var selected_city = "Bangalore";
+
 init = function(response){
 
 				$.each(response, function(index, result){
@@ -72,9 +74,11 @@ fillMaps = function(data){
 	$.each(data, function(index, result){
 		// Sometimes cuisine is listed as a string separated by commas.
 		console.log(result);
+		formattedCuisine = "";
 		$.each(result.cuisine.split(","), function(index, cuisines){
 			$.each(cuisines.split("/"), function(index, cuisine){
 					cuisine = cuisine.trim();
+					formattedCuisine += cuisine+",";
 					if(cuisine){
 						if(cuisineMap.hasOwnProperty(cuisine)){
 							cuisineMap[cuisine].push(result.ID);
@@ -88,7 +92,8 @@ fillMaps = function(data){
 									cityMap[result.parent][result.location]["cuisine"].push(cuisine);
 						}
 					}
-			});			
+			});
+			result.cuisine = formattedCuisine;				
 		});
 
 		// Save the outlet info in the object
@@ -186,6 +191,8 @@ populateFilters = function(city, location){
 		}
 		else{
 			cuisines =[];
+			blogsToShow = [];
+			outletsToShow = [];
 			$.each(location, function(index, area){
 				results = search(city, area);
 				cuisines = _.union(results.cuisine, cuisines);
@@ -235,6 +242,11 @@ searchByCuisine = function(city,location,cuisine){
 			});
 		}
 	}*/
+	if(location == undefined || !location || location.length<1){
+		location = Object.keys(cityMap[city]);
+	}
+	blogsToShow = [];
+	outletsToShow = [];
 	$.each(location, function(locIndex, area){
 				$.each(cuisine, function(cuisineIndex, type){
 					results = search(city,area,type);
@@ -311,10 +323,17 @@ populateCuisineFilter = function(cuisines){
 }
 
 populateLocationFilter = function(locations){
-	$("#location-desktop-modal-content").html("");
-		$.each(locations, function(index, location){
-			$("#location-desktop-modal-content").append('<p><input type="checkbox" name="location" id="'+location+'-checkbox-modal" value="'+location+'"><label for="'+location+'-checkbox-modal">'+location+'</label></p>');
+	$("#location-collapsible-body").html("");
+	$.each(_.sample(locations,5), function(index, location){
+		$("#location-collapsible-body").append('<p><input type="checkbox" name="location" id="'+location+'-checkbox-collapsible" value="'+location+'"><label for="'+location+'-checkbox-collapsible">'+location+'</label></p>');
 	});
+	if(locations.length > 5){
+		$(".location-collapsible-body-view-more").css("display","block");
+		$("#location-desktop-modal-content").html("");
+			$.each(locations, function(index, location){
+				$("#location-desktop-modal-content").append('<p><input type="checkbox" name="location" id="'+location+'-checkbox-modal" value="'+location+'"><label for="'+location+'-checkbox-modal">'+location+'</label></p>');
+		});
+	}
 }
 showErrorMessage = function(){
 	return "No results found";
@@ -385,7 +404,7 @@ $(document).ready(function(){
               success: function(cuisine){
                 fillMaps(cuisine);
                 //searchByCuisine("Bangalore",["Indira Nagar"],["Chaat"]);
-                populateFilters("Bangalore");
+                populateFilters(selected_city);
               }
             });
         }
@@ -393,11 +412,29 @@ $(document).ready(function(){
     });
 
 
-// Get all selected values
-var locations = $('input[name="location"]:checked').map(function() {
-    return this.value;
-}).get();
+applyLocationFilter = function(){
+	// Close the modal
+	$('#location-desktop-modal').closeModal();
+	// Get all locations
+	var locations = $('input[name="location"]:checked').map(function() {
+   		return this.value;
+	}).get();
+	populateFilters(selected_city, locations);	
+}
 
-var cuisines = $('input[name="location"]:checked').map(function() {
+applyCuisineFilter = function(){
+	// Close the modal
+	$("#category-desktop-modal").closeModal();
+	// Get selected locations
+	var locations = $('input[name="location"]:checked').map(function() {
+   		return this.value;
+	}).get();
+	// Get selected cuisines
+	var cuisines = $('input[name="cuisine"]:checked').map(function() {
     return this.value;
-}).get();
+	}).get();
+	console.log(cuisines);
+	searchByCuisine(selected_city, locations, cuisines);
+}
+
+
