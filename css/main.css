@@ -43,7 +43,7 @@
 /* Advertisement Cards */
 .ads-card {
   height: 250px;
-  background: white;
+  background: #ccc;
   padding: 0px !important;
   margin-bottom: 10px; }
   .ads-card:first-child {
@@ -366,13 +366,15 @@ hr {
 .blog-card .card-content {
   padding: 0px 10px 0px !important;
   line-height: 1.5em;
-  max-height: 6em !important;
   overflow: hidden;
   margin: 1em 0px;
   font-size: 0.85em; }
   .blog-card .card-content .material-icons {
     font-size: 0.9em;
     margin-right: 5px; }
+
+.best-for {
+  min-height: 6em; }
 
 @media only screen and (min-width: 993px) {
   .card-icons .material-icons {

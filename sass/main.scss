@@ -247,7 +247,7 @@ hr {
 .blog-card .card-content{
   padding: 0px 10px 0px !important;
   line-height: 1.5em;
-  max-height:6.0em!important;
+ //max-height:6.0em!important;
   overflow:hidden;
   margin: 1em 0px;
   font-size: 0.85em;
@@ -255,6 +255,9 @@ hr {
     font-size:0.9em;
     margin-right: 5px;
   }
+}
+.best-for{
+  min-height: 6em;
 }
 
 @media #{$large-and-up}{
