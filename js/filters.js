@@ -82,7 +82,6 @@ init = function(response){
 					// Insert the location and initialise to empty list
 					cityMap[parent][name]={outlet:[], cuisine:[], blog:[]};
 				});
-
 }
 
 fillMaps = function(data){
@@ -127,7 +126,7 @@ fillMaps = function(data){
 	});
 }
 
-
+/* Main Search Function */
 search = function(city, location, cuisine){
 	console.log("Search query for "+city+","+location+","+cuisine);
 	result = {}
@@ -184,7 +183,60 @@ search = function(city, location, cuisine){
 	return (result);
 }
 
+/* Populate Filters */
+populateCities = function(){
+	$("#city-collapsible-header span").html(selectedCity);
+	cities = Object.keys(cityMap["NULL"]);
+	$("#city-collapsible-body").html("");
+	$.each(_.sample(cities,4), function(key,city){
+		if(city != selectedCity){
+		$("#city-collapsible-body").append('<p><input type="radio" name="city" onclick="applyCityFilter(this)" id="'+city+'-radio-collapsible" value="'+city+'"><label for="'+city+'-radio-collapsible">'+city+'</label></p>');
+		$("#city-modal-body").append('<p><input type="radio" name="city" onclick="applyCityFilter(this)" id="'+city+'-radio-bottom-modal" value="'+city+'"><label for="'+city+'-radio-bottom-modal">'+city+'</label></p>');
+	}
+	});
+	if(cities.length > 5){
+		$(".city-collapsible-body-view-more").css("display","block");
+		$(".city-modal-body-view-more").css("display","block");
+		$("#city-desktop-modal-content").html("");
+			$.each(cities, function(index, city){
+				$("#city-desktop-modal-content").append('<p><input type="radio" name="city" id="'+city+'-radio-modal" value="'+city+'"><label for="'+city+'-radio-modal">'+city+'</label></p>');
+		});
+	}
+}
 
+populateCuisineFilter = function(cuisines){
+	$("#cuisine-collapsible-body").html("");
+	$.each(_.sample(cuisines,5), function(index, cuisine){
+		console.log(cuisine);
+		$("#cuisine-collapsible-body").append('<p><input type="checkbox" onclick="applyQuickCuisineFilter(this)" name="cuisine" id="'+cuisine+'-checkbox-collapsible" value="'+cuisine+'"><label for="'+cuisine+'-checkbox-collapsible">'+cuisine+'</label></p>');
+		$("#cuisine-modal-body").append('<p><input type="checkbox" onclick="applyQuickCuisineFilter(this)" name="cuisine" id="'+cuisine+'-checkbox-bottom-modal" value="'+cuisine+'"><label for="'+cuisine+'-checkbox-bottom-modal">'+cuisine+'</label></p>');
+	});	
+	if(cuisines.length>5){
+		$(".cuisine-collapsible-body-view-more").css("display","block");
+		$(".cuisine-modal-body-view-more").css("display","block");
+		$("#cuisine-desktop-modal-content").html("");
+		$.each(cuisines, function(index,cuisine){
+			$("#cuisine-desktop-modal-content").append('<p><input type="checkbox" onclick="checkboxUIHack(this)" name="cuisine" id="'+cuisine+'-checkbox-modal" value="'+cuisine+'"><label for="'+cuisine+'-checkbox-modal">'+cuisine+'</label></p>')
+		});
+	}
+}
+
+populateLocationFilter = function(locations){
+	console.log("Rearranging");
+	$("#location-collapsible-body").html("");
+	$.each(_.sample(locations,5), function(index, location){
+		$("#location-collapsible-body").append('<p><input type="checkbox" onclick="applyQuickLocationFilter(this)" name="location" id="'+location+'-checkbox-collapsible" value="'+location+'"><label for="'+location+'-checkbox-collapsible">'+location+'</label></p>');
+		$("#location-modal-body").append('<p><input type="checkbox" onclick="applyQuickLocationFilter(this)" name="location" id="'+location+'-checkbox-bottom-modal" value="'+location+'"><label for="'+location+'-checkbox-bottom-modal">'+location+'</label></p>');
+	});
+	if(locations.length > 5){
+		$(".location-collapsible-body-view-more").css("display","block");
+		$(".location-modal-body-view-more").css("display","block");
+		$("#location-desktop-modal-content").html("");
+			$.each(locations, function(index, location){
+				$("#location-desktop-modal-content").append('<p><input type="checkbox" onclick="checkboxUIHack(this)" name="location" id="'+location+'-checkbox-modal" value="'+location+'"><label for="'+location+'-checkbox-modal">'+location+'</label></p>');
+		});
+	}
+}
 populateFilters = function(city, location){
 	// Fill in location as well as cuisine filters
 	// If location undefined, then city has been changed or site has just been opened.
@@ -261,6 +313,8 @@ searchByCuisine = function(city,location,cuisine){
 }
 
 initialiseBlogView = function(blogsToShow){
+	console.log("Initialising Blog View");
+	console.log(blogsToShow);
 	// If no blogs then remove the block
 	if(blogsToShow.length == 0){
 		$(".blog-list").css("display","none");
@@ -273,14 +327,17 @@ initialiseBlogView = function(blogsToShow){
 	if(blogsToShow.length)
 		blogs += makeBlogCard(blogsToShow.pop());
 	else
-		blogs += showErrorMessage();
+		return false;
 	if(blogsToShow.length)
 		blogs += makeBlogCard(blogsToShow.pop());
 	blogs += "</div>";
+	console.log(blogs)
 	$(".blog-list").append(blogs);
 
 	if(blogsToShow.length > 0)
 		$(".blogs-view-more").css("display","block");
+
+
 }
 initialiseOutletView = function(outletsToShow, showLess){
 	$(".outlet-list").html("");
@@ -339,39 +396,7 @@ showMoreOutlets = function(){
 			redrawMap(mapLocationData);
 }
 
-populateCuisineFilter = function(cuisines){
-	$("#cuisine-collapsible-body").html("");
-	$.each(_.sample(cuisines,5), function(index, cuisine){
-		console.log(cuisine);
-		$("#cuisine-collapsible-body").append('<p><input type="checkbox" onclick="applyQuickCuisineFilter(this)" name="cuisine" id="'+cuisine+'-checkbox-collapsible" value="'+cuisine+'"><label for="'+cuisine+'-checkbox-collapsible">'+cuisine+'</label></p>');
-		$("#cuisine-modal-body").append('<p><input type="checkbox" onclick="applyQuickCuisineFilter(this)" name="cuisine" id="'+cuisine+'-checkbox-bottom-modal" value="'+cuisine+'"><label for="'+cuisine+'-checkbox-bottom-modal">'+cuisine+'</label></p>');
-	});	
-	if(cuisines.length>5){
-		$(".cuisine-collapsible-body-view-more").css("display","block");
-		$(".cuisine-modal-body-view-more").css("display","block");
-		$("#cuisine-desktop-modal-content").html("");
-		$.each(cuisines, function(index,cuisine){
-			$("#cuisine-desktop-modal-content").append('<p><input type="checkbox" onclick="checkboxUIHack(this)" name="cuisine" id="'+cuisine+'-checkbox-modal" value="'+cuisine+'"><label for="'+cuisine+'-checkbox-modal">'+cuisine+'</label></p>')
-		});
-	}
-}
 
-populateLocationFilter = function(locations){
-	console.log("Rearranging");
-	$("#location-collapsible-body").html("");
-	$.each(_.sample(locations,5), function(index, location){
-		$("#location-collapsible-body").append('<p><input type="checkbox" onclick="applyQuickLocationFilter(this)" name="location" id="'+location+'-checkbox-collapsible" value="'+location+'"><label for="'+location+'-checkbox-collapsible">'+location+'</label></p>');
-		$("#location-modal-body").append('<p><input type="checkbox" onclick="applyQuickLocationFilter(this)" name="location" id="'+location+'-checkbox-bottom-modal" value="'+location+'"><label for="'+location+'-checkbox-bottom-modal">'+location+'</label></p>');
-	});
-	if(locations.length > 5){
-		$(".location-collapsible-body-view-more").css("display","block");
-		$(".location-modal-body-view-more").css("display","block");
-		$("#location-desktop-modal-content").html("");
-			$.each(locations, function(index, location){
-				$("#location-desktop-modal-content").append('<p><input type="checkbox" onclick="checkboxUIHack(this)" name="location" id="'+location+'-checkbox-modal" value="'+location+'"><label for="'+location+'-checkbox-modal">'+location+'</label></p>');
-		});
-	}
-}
 showErrorMessage = function(){
 	return "No results found";
 }
@@ -392,7 +417,8 @@ makeBlogCard = function(postId){
     blogCard += '<p><em style="color: #F44336">By Anandi Bandopadhyay</em></p><hr>';
     blogCard +=	'<p><i class="material-icons">place</i>'+result.parent+'</p>';
     if (result["cuisine"].length > 0)
-       blogCard +=	'<p><i class="material-icons">local_dining</i>'+result.cuisine+'</p></div></div></div>';
+       blogCard +=	'<p><i class="material-icons">local_dining</i>'+result.cuisine+'</p>';
+   blogCard += '</div></div></div>';
 
     return blogCard;
 }
@@ -438,7 +464,21 @@ makeOutletCard = function(postId){
 
     return outletCard;
 }
+applyCityFilter = function(e){
+	$('#city-desktop-modal').closeModal();
+	
+	city = $(e).val();
+	if(city == undefined){
+		city=$('input[name="city"]:checked').val();
+	}
+	selectedCity = city;
+	populateCities();
+	populateFilters(selectedCity);
 
+	// Fix the UI
+
+
+}
 applyLocationFilter = function(){
 	// Close the modal
 	$('#location-desktop-modal').closeModal();
@@ -498,6 +538,29 @@ applyQuickLocationFilter = function(e){
 applyQuickCuisineFilter = function(e){
 	checkboxUIHack(e);
 	applyCuisineFilter();
+}
+
+/* Functions for archive page */
+/* Detect archive template*/
+isArchiveTemplate = function(){
+	return $("body").hasClass("archive");	
+}
+
+/* Auto Check boxes based on url*/
+autoSelectFilters = function(){
+	path = window.location.pathname;
+	tag = path.split("/")[1];
+	value = path.split("/")[2];
+	$("input[id='"+value+"-checkbox-collapsible'").prop("checked",true);
+	$("input[id='"+value+"-checkbox-bottom-modal'").prop("checked",true);
+	$("input[id='"+value+"-checkbox-modal'").prop("checked",true);
+	if(tag == "location"){
+		applyLocationFilter();
+	}
+	else if(tag == "cuisine"){
+		applyCuisineFilter();
+	}
+	else return false;
 }
 
 /* Helper function for _.uniq */
@@ -574,13 +637,8 @@ function deleteMarkers() {
   console.log(markers);
 }
 
-/* Detect archive template*/
-isArchiveTemplate = function(){
-	//return $("body").hasClass("archive");	
-	return true;
-}
 
-/* Kick things off */
+/* Kick things off : Wordpress style*/
 /*$(document).ready(function(){
 	$.getJSON('//talkingstreet.in/wp-content/themes/jupiter-child/js/location.listing.json', function(response){
 		init(response);
@@ -602,9 +660,12 @@ $(document).ready(function(){
 	          success: function(cuisine){
 	            fillMaps(cuisine);
 	            //searchByCuisine("Bangalore",["Indira Nagar"],["Chaat"]);
-	            if(isArchiveTemplate)
-	            	initialiseMap();
 	            populateFilters(selectedCity);
+	            populateCities();
+	             if(isArchiveTemplate()){
+	             	autoSelectFilters();
+	            	initialiseMap();
+	            }
 	          }
 	        });
 	    }

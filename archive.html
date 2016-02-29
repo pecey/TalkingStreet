@@ -84,10 +84,8 @@
     <div id="city-modal" class="modal bottom-sheet">
       <div class="modal-content">
         <h4>Select a city</h4>
-         <p><input type="radio" name="city" id="indore-radio" value="Indore"><label for="indore-radio">Indore</label></p>
-         <p><input type="radio" name="city" id="kolkata-radio" value="kolkata"><label for="kolkata-radio">Kolkata</label></p>
-         <p><input type="radio" name="city" id="delhi-radio" value="delhi"><label for="delhi-radio">Delhi</label></p>
-         <p style="text-align: right;"><a class="modal-trigger" href="#city-desktop-modal">View More</a></p>
+        <div id="city-modal-body"></div>
+         <p class="city-modal-body-view-more" style="text-align: right;"><a class="modal-trigger" href="#city-desktop-modal">View More</a></p>
       </div>
     </div>
     <!-- Location selection -->
@@ -151,10 +149,8 @@
               </div>
 
               <div class="collapsible-body">
-                <p><input type="radio" name="city" id="indore-radio-desktop" value="Indore"><label for="indore-radio-desktop">Indore</label></p>
-                <p><input type="radio" name="city" id="kolkata-radio-desktop" value="kolkata"><label for="kolkata-radio-desktop">Kolkata</label></p>
-                <p><input type="radio" name="city" id="delhi-radio-desktop" value="delhi"><label for="delhi-radio-desktop">Delhi</label></p>
-                <p style="text-align: right;"><a class="modal-trigger" href="#city-desktop-modal">View More</a></p>
+                <div id="city-collapsible-body"></div>
+                <p class="city-collapsible-body-view-more" style="text-align: right;"><a class="modal-trigger" href="#city-desktop-modal">View More</a></p>
               </div>
             </li>
 
@@ -201,15 +197,9 @@
 
         <div id="city-desktop-modal" class="modal">
           <div class="modal-content row">
-            <div class="modal-desktop-title">Showing all cities</div>
-            <div class="modal-desktop-content">
-              <div class="col l6 s12">
-                <p><input type="radio" name="city" id="indore-radio-modal" value="Indore"><label for="indore-radio-modal">Indore</label></p>
-                <p><input type="radio" name="city" id="kolkata-radio-modal" value="kolkata"><label for="kolkata-radio-modal">Kolkata</label></p>
-                <p><input type="radio" name="city" id="delhi-radio-modal" value="delhi"><label for="delhi-radio-desktop">Delhi</label></p>
-              </div>
-              <div class="col l6 s12">
-              </div>
+            <div class="modal-desktop-title">Showing all cities<span style="float:right; cursor: pointer"><i class="material-icons" onclick="applyCityFilter()">search</i></span></div>
+            <div class="modal-desktop-content" id="city-desktop-modal-content">
+            <!-- This will be populated by JS -->
             </div>
           </div>
         </div>
