@@ -1,4 +1,5 @@
-<button id="share">Share</button>
+<button id="share" onclick="share()">Share</button>
+<button id="send" onclick="send()">Send</button>
 <script>
   share = function(){
     FB.ui({
@@ -11,7 +12,13 @@
   }
 
   send = function(){
-
+    FB.ui({
+    method: 'send',
+    link: 'https://pecey.github.io/TalkingStreet',
+      }, function(response){
+      // Debug response (optional)
+      console.log(response);
+    });
   }
 
   window.fbAsyncInit = function() {
