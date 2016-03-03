@@ -1,15 +1,25 @@
+<button id="share">Share</button>
 <script>
+  share = function(){
+    FB.ui({
+    method: 'share',
+    href: 'https://pecey.github.io/TalkingStreet',
+      }, function(response){
+      // Debug response (optional)
+      console.log(response);
+    });
+  }
+
+  send = function(){
+
+  }
+
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '1716174401929500',
       xfbml      : true,
       version    : 'v2.5'
     });
-
-    FB.ui({
-    method: 'share',
-    href: 'https://developers.facebook.com/docs/'
-    }, function(response){});
   };
 
   (function(d, s, id){
