@@ -4,7 +4,7 @@
   share = function(){
     FB.ui({
     method: 'share',
-    href: 'https://pecey.github.io/TalkingStreet',
+    href: 'https://pecey.github.io/',
       }, function(response){
       // Debug response (optional)
       console.log(response);
@@ -14,7 +14,8 @@
   send = function(){
     FB.ui({
     method: 'send',
-    link: 'https://pecey.github.io/TalkingStreet',
+    link: 'https://pecey.github.io/',
+    redirect_uri: window.location.href,
       }, function(response){
       // Debug response (optional)
       console.log(response);
